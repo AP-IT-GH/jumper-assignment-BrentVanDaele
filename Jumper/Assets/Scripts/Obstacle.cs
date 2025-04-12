@@ -10,6 +10,7 @@ namespace Assets.Scripts
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
+            obstacleSpeed = Random.Range(0.5f, 1.5F);
             this.transform.localPosition = new Vector3(-3.0f, 0.5f, 0f);
             this.transform.localScale = new Vector3(1, 1, 8);
         }

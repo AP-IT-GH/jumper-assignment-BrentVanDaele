@@ -34,19 +34,28 @@ namespace Assets.Scripts
             {
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
 
-                if (obstacle.transform.position.x > transform.position.x-1) // Only penalize bad jumps that are to far from object
+                // Calculate the distance from the obstacle
+                float distanceToObstacle = Mathf.Abs(obstacle.transform.position.x - transform.position.x);
+
+                // Reward for jumping close to the obstacle, penalize for jumping far
+                if (distanceToObstacle < 2f)
                 {
-                    SetReward(-0.1f);
+                    SetReward(0.5f); // Positive reward for jumping close to the obstacle
+                }
+                else
+                {
+                    SetReward(-0.2f); // Smaller penalty for jumping too far
                 }
             }
 
-
+            // If the obstacle is destroyed, reward the agent for completing the task
             if (obstacle == null)
             {
                 SetReward(2.0f);
                 EndEpisode();
             }
 
+            // If the agent falls down, penalize it
             if (transform.localPosition.y <= -0.5f)
             {
                 SetReward(-1.0f);
@@ -54,6 +63,8 @@ namespace Assets.Scripts
                 EndEpisode();
             }
         }
+
+
 
         public void OnCollisionEnter(Collision collision)
         {
