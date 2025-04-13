@@ -8,16 +8,19 @@ namespace Assets.Scripts
     public class CubeAgent : Agent
     {
         [SerializeField] float jumpForce = 7f;
-        [SerializeField] GameObject obstaclePrefab;
         private Rigidbody rb;
-        private GameObject obstacle = null;
+        [SerializeField] GameObject[] obstaclePrefabs;
+        private GameObject obstacle;
 
         public override void OnEpisodeBegin()
         {
-            obstacle = Instantiate(obstaclePrefab);
+            obstacle = Instantiate(obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)]);
             rb = GetComponent<Rigidbody>();
             rb.linearVelocity = Vector3.zero; // Reset velocity to prevent weird physics
+            rb.angularVelocity = Vector3.zero;
             transform.localPosition = new Vector3(0, 0.6f, 0); // Reset position
+            transform.rotation = Quaternion.LookRotation(Vector3.forward);
+
         }
 
         public override void CollectObservations(VectorSensor sensor)
@@ -30,12 +33,33 @@ namespace Assets.Scripts
         {
             float jumpAction = actions.ContinuousActions[0];
 
+            // Check for obstacles using raycasts
+            bool seesXObstacle = Physics.Raycast(transform.position, transform.forward, out RaycastHit hitX, 10f)
+                                  && hitX.collider.CompareTag("obstacle");
+
+            bool seesZObstacle = Physics.Raycast(transform.position, transform.right, out RaycastHit hitZ, 10f)
+                                  && hitZ.collider.CompareTag("obstacle");
+
+            // Rotate toward Z direction if nothing is seen forward and something is seen on the side
+            if (!seesXObstacle && seesZObstacle)
+            {
+                transform.rotation = Quaternion.LookRotation(Vector3.right);
+            }
+            else if (seesXObstacle && !seesZObstacle)
+            {
+                transform.rotation = Quaternion.LookRotation(Vector3.forward);
+            }
+
+
             if (IsGrounded() && jumpAction > 0)
             {
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
 
                 // Calculate the distance from the obstacle
-                float distanceToObstacle = Mathf.Abs(obstacle.transform.position.x - transform.position.x);
+                Vector3 horizontalDist = new Vector3(obstacle.transform.position.x, 0, obstacle.transform.position.z) -
+                         new Vector3(transform.position.x, 0, transform.position.z);
+                float distanceToObstacle = horizontalDist.magnitude;
+
 
                 // Reward for jumping close to the obstacle, penalize for jumping far
                 if (distanceToObstacle < 2f)
@@ -58,13 +82,11 @@ namespace Assets.Scripts
             // If the agent falls down, penalize it
             if (transform.localPosition.y <= -0.5f)
             {
-                SetReward(-1.0f);
+                SetReward(-2.0f);
                 Destroy(obstacle);
                 EndEpisode();
             }
         }
-
-
 
         public void OnCollisionEnter(Collision collision)
         {

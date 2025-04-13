@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1868319862150235314}
   - component: {fileID: 6935076847265817944}
   m_Layer: 0
-  m_Name: Obstacle
+  m_Name: ObstacleX
   m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,7 +122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bdeb3c7ad3a5a64f9778cc6473ed497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleSpeed: 0.5
+  obstacleSpeedMin: 0.5
+  obstacleSpeedMax: 1.5
 --- !u!54 &6935076847265817944
 Rigidbody:
   m_ObjectHideFlags: 0

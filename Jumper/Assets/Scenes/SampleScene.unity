@@ -205,8 +205,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: -0.08717229, y: 0.8995905, z: -0.21045253, w: -0.37262273}
+  m_LocalPosition: {x: 11.651766, y: 8.156234, z: 11.651766}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -600,13 +600,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1720985877}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 3, y: 0.5, z: 0}
+  m_LocalRotation: {x: 0, y: -0.92387956, z: 0, w: 0.38268343}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 663139280}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -135, z: 0}
 --- !u!65 &1720985879
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -753,7 +753,9 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
   jumpForce: 1
-  obstaclePrefab: {fileID: 4995431942997917, guid: 54283d57477699146ac9824941913b7c, type: 3}
+  obstaclePrefabs:
+  - {fileID: 4995431942997917, guid: 3aef87447603eee4c8b6c264669c6f72, type: 3}
+  - {fileID: 4995431942997917, guid: 3e196265add20cd44b48a0988aa54b12, type: 3}
 --- !u!114 &1720985885
 MonoBehaviour:
   m_ObjectHideFlags: 0

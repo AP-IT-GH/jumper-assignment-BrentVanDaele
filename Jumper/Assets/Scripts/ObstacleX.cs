@@ -3,14 +3,16 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class Obstacle : MonoBehaviour
+    public class ObstacleX : MonoBehaviour
     {
-        [SerializeField] float obstacleSpeed = 1.0f;
+        [SerializeField] float obstacleSpeedMin = 0.1f;
+        [SerializeField] float obstacleSpeedMax = 1.5f;
+        private float obstacleSpeed;
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
-            obstacleSpeed = Random.Range(0.5f, 1.5F);
+            obstacleSpeed = Random.Range(obstacleSpeedMin, obstacleSpeedMax);
             this.transform.localPosition = new Vector3(-3.0f, 0.5f, 0f);
             this.transform.localScale = new Vector3(1, 1, 8);
         }
