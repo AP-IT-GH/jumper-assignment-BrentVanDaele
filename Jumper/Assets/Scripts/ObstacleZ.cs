@@ -5,8 +5,8 @@ namespace Assets.Scripts
 {
     public class ObstacleZ : MonoBehaviour
     {
-        [SerializeField] float obstacleSpeedMin = 0.1f;
-        [SerializeField] float obstacleSpeedMax = 1.5f;
+        [SerializeField] float obstacleSpeedMin = 0.001f;
+        [SerializeField] float obstacleSpeedMax = 0.5f;
         private float obstacleSpeed;
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created

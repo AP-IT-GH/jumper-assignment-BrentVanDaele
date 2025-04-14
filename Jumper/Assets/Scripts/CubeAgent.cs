@@ -7,7 +7,7 @@ namespace Assets.Scripts
 {
     public class CubeAgent : Agent
     {
-        [SerializeField] float jumpForce = 7f;
+        [SerializeField] float jumpForce = 15f;
         private Rigidbody rb;
         [SerializeField] GameObject[] obstaclePrefabs;
         private GameObject obstacle;
@@ -15,17 +15,17 @@ namespace Assets.Scripts
         public override void OnEpisodeBegin()
         {
             obstacle = Instantiate(obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)]);
-            rb = GetComponent<Rigidbody>();
+            rb = this.GetComponent<Rigidbody>();
             rb.linearVelocity = Vector3.zero; // Reset velocity to prevent weird physics
             rb.angularVelocity = Vector3.zero;
-            transform.localPosition = new Vector3(0, 0.6f, 0); // Reset position
-            transform.rotation = Quaternion.LookRotation(Vector3.forward);
+            this.transform.localPosition = new Vector3(0, 0.6f, 0); // Reset position
+            this.transform.rotation = Quaternion.LookRotation(Vector3.forward);
 
         }
 
         public override void CollectObservations(VectorSensor sensor)
         {
-            sensor.AddObservation(transform.localPosition);
+            sensor.AddObservation(this.transform.localPosition);
             sensor.AddObservation(rb.linearVelocity.y);
         }
 
@@ -33,42 +33,22 @@ namespace Assets.Scripts
         {
             float jumpAction = actions.ContinuousActions[0];
 
-            // Check for obstacles using raycasts
-            bool seesXObstacle = Physics.Raycast(transform.position, transform.forward, out RaycastHit hitX, 10f)
-                                  && hitX.collider.CompareTag("obstacle");
+            RotateCorrectly();
 
-            bool seesZObstacle = Physics.Raycast(transform.position, transform.right, out RaycastHit hitZ, 10f)
-                                  && hitZ.collider.CompareTag("obstacle");
-
-            // Rotate toward Z direction if nothing is seen forward and something is seen on the side
-            if (!seesXObstacle && seesZObstacle)
+            if (IsGrounded() && jumpAction > 0.0f)
             {
-                transform.rotation = Quaternion.LookRotation(Vector3.right);
-            }
-            else if (seesXObstacle && !seesZObstacle)
-            {
-                transform.rotation = Quaternion.LookRotation(Vector3.forward);
-            }
+                rb.AddForce(Vector3.up * jumpAction, ForceMode.Impulse);
 
+                // get distance via raycasting
+                Physics.Raycast(this.transform.position, this.transform.forward, out RaycastHit hitFront, 10f);
 
-            if (IsGrounded() && jumpAction > 0)
-            {
-                rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-
-                // Calculate the distance from the obstacle
-                Vector3 horizontalDist = new Vector3(obstacle.transform.position.x, 0, obstacle.transform.position.z) -
-                         new Vector3(transform.position.x, 0, transform.position.z);
-                float distanceToObstacle = horizontalDist.magnitude;
-
-
-                // Reward for jumping close to the obstacle, penalize for jumping far
-                if (distanceToObstacle < 2f)
+                if (hitFront.distance < 1.5f)
                 {
-                    SetReward(0.5f); // Positive reward for jumping close to the obstacle
+                    SetReward(0.5f); // Reward for correctly jumping close to an obstacle
                 }
                 else
                 {
-                    SetReward(-0.2f); // Smaller penalty for jumping too far
+                    SetReward(-0.4f); // Punish to much jumping
                 }
             }
 
@@ -82,7 +62,7 @@ namespace Assets.Scripts
             // If the agent falls down, penalize it
             if (transform.localPosition.y <= -0.5f)
             {
-                SetReward(-2.0f);
+                SetReward(-1.0f);
                 Destroy(obstacle);
                 EndEpisode();
             }
@@ -116,7 +96,44 @@ namespace Assets.Scripts
 
         private bool IsGrounded()
         {
-            return Physics.Raycast(transform.position, Vector3.down, 1.1f);
+            // check if the agent is at the ground again, but only the ground/floor
+            return Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, 1.1f) && hit.collider.CompareTag("floor");
+        }
+
+        private  void RotateCorrectly()
+        {
+            // Check for obstacles using raycasts
+            bool seesObstacleFront = Physics.Raycast(this.transform.position, this.transform.forward, out RaycastHit hitFront, 10f)
+                                  && hitFront.collider.CompareTag("obstacle");
+
+            bool seesObstacleRight = Physics.Raycast(this.transform.position, this.transform.right, out RaycastHit hitRight, 10f)
+                                  && hitRight.collider.CompareTag("obstacle");
+
+            bool seesObstacleLeft = Physics.Raycast(this.transform.position, -this.transform.right, out RaycastHit hitLeft, 10f)
+                                  && hitLeft.collider.CompareTag("obstacle");
+
+
+            // Rotate toward the correct direction to jump
+            if (!seesObstacleFront && !seesObstacleLeft && seesObstacleRight)
+            {
+                // rotate right if an object is right
+                this.transform.rotation = Quaternion.LookRotation(this.transform.right);
+            }
+            else if (!seesObstacleFront && seesObstacleLeft && !seesObstacleRight)
+            {
+                // rotate left if an object is left
+                this.transform.rotation = Quaternion.LookRotation(-this.transform.right);
+            }
+            else if ((seesObstacleFront && !seesObstacleRight && !seesObstacleLeft) || (seesObstacleLeft && seesObstacleRight && !seesObstacleFront))
+            {
+                // don't rotate when an object is at front or of there are object left and right
+                this.transform.rotation = Quaternion.LookRotation(this.transform.forward);
+            }
+            else
+            {
+                // rotate 180 degrees if there is no object seen
+                this.transform.rotation = Quaternion.LookRotation(-this.transform.forward);
+            }
         }
     }
 }
