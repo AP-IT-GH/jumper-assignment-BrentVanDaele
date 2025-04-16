@@ -1,49 +1,227 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>body {
-  max-width: 980px;
-  margin: 16px auto;
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>@font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
 }
 
-body .markdown-body
-{
-  padding: 45px;
+@media (prefers-color-scheme: dark) {
+  body,
+  [data-theme="dark"] {
+    /*dark*/
+    color-scheme: dark;
+    --color-prettylights-syntax-comment: #8b949e;
+    --color-prettylights-syntax-constant: #79c0ff;
+    --color-prettylights-syntax-entity: #d2a8ff;
+    --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+    --color-prettylights-syntax-entity-tag: #7ee787;
+    --color-prettylights-syntax-keyword: #ff7b72;
+    --color-prettylights-syntax-string: #a5d6ff;
+    --color-prettylights-syntax-variable: #ffa657;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+    --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+    --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+    --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+    --color-prettylights-syntax-carriage-return-bg: #b62324;
+    --color-prettylights-syntax-string-regexp: #7ee787;
+    --color-prettylights-syntax-markup-list: #f2cc60;
+    --color-prettylights-syntax-markup-heading: #1f6feb;
+    --color-prettylights-syntax-markup-italic: #c9d1d9;
+    --color-prettylights-syntax-markup-bold: #c9d1d9;
+    --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+    --color-prettylights-syntax-markup-deleted-bg: #67060c;
+    --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+    --color-prettylights-syntax-markup-inserted-bg: #033a16;
+    --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+    --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+    --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+    --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+    --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+    --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+    --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+    --color-fg-default: #e6edf3;
+    --color-fg-muted: #848d97;
+    --color-fg-subtle: #6e7681;
+    --color-canvas-default: #0d1117;
+    --color-canvas-subtle: #161b22;
+    --color-border-default: #30363d;
+    --color-border-muted: #21262d;
+    --color-neutral-muted: rgba(110,118,129,0.4);
+    --color-accent-fg: #2f81f7;
+    --color-accent-emphasis: #1f6feb;
+    --color-success-fg: #3fb950;
+    --color-success-emphasis: #238636;
+    --color-attention-fg: #d29922;
+    --color-attention-emphasis: #9e6a03;
+    --color-attention-subtle: rgba(187,128,9,0.15);
+    --color-danger-fg: #f85149;
+    --color-danger-emphasis: #da3633;
+    --color-done-fg: #a371f7;
+    --color-done-emphasis: #8957e5;
+  }
 }
 
-@font-face {
-  font-family: fontawesome-mini;
-  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+@media (prefers-color-scheme: light) {
+  body,
+  [data-theme="light"] {
+    /*light*/
+    color-scheme: light;
+    --color-prettylights-syntax-comment: #57606a;
+    --color-prettylights-syntax-constant: #0550ae;
+    --color-prettylights-syntax-entity: #6639ba;
+    --color-prettylights-syntax-storage-modifier-import: #24292f;
+    --color-prettylights-syntax-entity-tag: #116329;
+    --color-prettylights-syntax-keyword: #cf222e;
+    --color-prettylights-syntax-string: #0a3069;
+    --color-prettylights-syntax-variable: #953800;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+    --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+    --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+    --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+    --color-prettylights-syntax-carriage-return-bg: #cf222e;
+    --color-prettylights-syntax-string-regexp: #116329;
+    --color-prettylights-syntax-markup-list: #3b2300;
+    --color-prettylights-syntax-markup-heading: #0550ae;
+    --color-prettylights-syntax-markup-italic: #24292f;
+    --color-prettylights-syntax-markup-bold: #24292f;
+    --color-prettylights-syntax-markup-deleted-text: #82071e;
+    --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+    --color-prettylights-syntax-markup-inserted-text: #116329;
+    --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+    --color-prettylights-syntax-markup-changed-text: #953800;
+    --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+    --color-prettylights-syntax-markup-ignored-text: #eaeef2;
+    --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+    --color-prettylights-syntax-meta-diff-range: #8250df;
+    --color-prettylights-syntax-brackethighlighter-angle: #57606a;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+    --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+    --color-fg-default: #1F2328;
+    --color-fg-muted: #656d76;
+    --color-fg-subtle: #6e7781;
+    --color-canvas-default: #ffffff;
+    --color-canvas-subtle: #f6f8fa;
+    --color-border-default: #d0d7de;
+    --color-border-muted: hsla(210,18%,87%,1);
+    --color-neutral-muted: rgba(175,184,193,0.2);
+    --color-accent-fg: #0969da;
+    --color-accent-emphasis: #0969da;
+    --color-success-fg: #1a7f37;
+    --color-success-emphasis: #1f883d;
+    --color-attention-fg: #9a6700;
+    --color-attention-emphasis: #9a6700;
+    --color-attention-subtle: #fff8c5;
+    --color-danger-fg: #d1242f;
+    --color-danger-emphasis: #cf222e;
+    --color-done-fg: #8250df;
+    --color-done-emphasis: #8250df;
+  }
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--color-canvas-default);
+}
+
+.markdown-body .octicon-link:before {
+  font: normal normal normal 16px/1 octicons-link;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  content: '\f05c';
+  vertical-align: middle;
 }
 
 .markdown-body {
-  font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  color: #333333;
-  overflow: hidden;
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  margin: 0;
+  color: var(--color-fg-default);
+  background-color: var(--color-canvas-default);
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.5;
   word-wrap: break-word;
 }
 
-.markdown-body a {
-  background: transparent;
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
 }
 
-.markdown-body a:active,
-.markdown-body a:hover {
-  outline: 0;
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+}
+
+.markdown-body details,
+.markdown-body figcaption,
+.markdown-body figure {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body [hidden] {
+  display: none !important;
+}
+
+.markdown-body a {
+  background-color: transparent;
+  color: var(--color-accent-fg);
+  text-decoration: none;
+}
+
+.markdown-body abbr[title] {
+  border-bottom: none;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 .markdown-body b,
 .markdown-body strong {
-  font-weight: bold;
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body dfn {
+  font-style: italic;
+}
+
+.markdown-body h1 {
+  margin: .67em 0;
+  font-weight: var(--base-text-weight-semibold, 600);
+  padding-bottom: .3em;
+  font-size: 2em;
+  border-bottom: 1px solid var(--color-border-muted);
 }
 
 .markdown-body mark {
-  background: #ff0;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
+  background-color: var(--color-attention-subtle);
+  color: var(--color-fg-default);
+}
+
+.markdown-body small {
+  font-size: 90%;
 }
 
 .markdown-body sub,
@@ -53,62 +231,117 @@ body .markdown-body
   position: relative;
   vertical-align: baseline;
 }
-.markdown-body sup {
-  top: -0.5em;
-}
+
 .markdown-body sub {
   bottom: -0.25em;
 }
 
-.markdown-body h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+.markdown-body sup {
+  top: -0.5em;
 }
 
 .markdown-body img {
-  border: 0;
-}
-
-.markdown-body hr {
-  -moz-box-sizing: content-box;
+  border-style: none;
+  max-width: 100%;
   box-sizing: content-box;
-  height: 0;
-}
-
-.markdown-body pre {
-  overflow: auto;
+  background-color: var(--color-canvas-default);
 }
 
 .markdown-body code,
 .markdown-body kbd,
 .markdown-body pre,
 .markdown-body samp {
-  font-family: monospace, monospace;
+  font-family: monospace;
   font-size: 1em;
 }
 
+.markdown-body figure {
+  margin: 1em 40px;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  overflow: hidden;
+  background: transparent;
+  border-bottom: 1px solid var(--color-border-muted);
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: var(--color-border-default);
+  border: 0;
+}
+
 .markdown-body input {
-  color: inherit;
   font: inherit;
   margin: 0;
+  overflow: visible;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
-.markdown-body html input[disabled] {
-  cursor: default;
+.markdown-body [type=button],
+.markdown-body [type=reset],
+.markdown-body [type=submit] {
+  -webkit-appearance: button;
+  appearance: button;
 }
 
-.markdown-body input {
-  line-height: normal;
-}
-
-.markdown-body input[type="checkbox"] {
+.markdown-body [type=checkbox],
+.markdown-body [type=radio] {
   box-sizing: border-box;
   padding: 0;
 }
 
+.markdown-body [type=number]::-webkit-inner-spin-button,
+.markdown-body [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.markdown-body [type=search]::-webkit-search-cancel-button,
+.markdown-body [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body ::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .54;
+}
+
+.markdown-body ::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body ::placeholder {
+  color: var(--color-fg-subtle);
+  opacity: 1;
+}
+
+.markdown-body hr::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
 .markdown-body table {
-  border-collapse: collapse;
   border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
 }
 
 .markdown-body td,
@@ -116,107 +349,60 @@ body .markdown-body
   padding: 0;
 }
 
-.markdown-body .codehilitetable,
-.markdown-body .highlighttable {
-  border: 0;
-  border-spacing: 0;
+.markdown-body details summary {
+  cursor: pointer;
 }
 
-.markdown-body .codehilitetable tr,
-.markdown-body .highlighttable {
-  border: 0;
+.markdown-body details:not([open])>*:not(summary) {
+  display: none !important;
 }
 
-.markdown-body .codehilitetable pre,
-.markdown-body .codehilitetable div.codehilite,
-.markdown-body .highlighttable pre,
-.markdown-body .highlighttable div.highlight {
-  margin: 0;
-}
-
-.markdown-body .linenos,
-.markdown-body .code,
-.markdown-body .codehilitetable td,
-.markdown-body .highlighttable td {
-  border: 0;
-  padding: 0;
-}
-
-.markdown-body td:not(.linenos) .linenodiv {
-  padding: 0 !important;
-}
-
-.markdown-body .code {
-  width: 100%;
-}
-
-.markdown-body .linenos div pre,
-.markdown-body .linenodiv pre,
-.markdown-body .linenodiv {
-  border: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  -webkit-border-top-left-radius: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -moz-border-radius-topleft: 3px;
-  -moz-border-radius-bottomleft: 3px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
-
-.markdown-body .code div pre,
-.markdown-body .code div {
-  border: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  -webkit-border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  -moz-border-radius-topright: 3px;
-  -moz-border-radius-bottomright: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-
-.markdown-body * {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.markdown-body input {
-  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-  line-height: 1.4;
-}
-
-.markdown-body a {
-  color: #4183c4;
-  text-decoration: none;
-}
-
-.markdown-body a:hover,
 .markdown-body a:focus,
-.markdown-body a:active {
-  text-decoration: underline;
+.markdown-body [role=button]:focus,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=checkbox]:focus {
+  outline: 2px solid var(--color-accent-fg);
+  outline-offset: -2px;
+  box-shadow: none;
 }
 
-.markdown-body hr {
-  height: 0;
-  margin: 15px 0;
-  overflow: hidden;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid #ddd;
+.markdown-body a:focus:not(:focus-visible),
+.markdown-body [role=button]:focus:not(:focus-visible),
+.markdown-body input[type=radio]:focus:not(:focus-visible),
+.markdown-body input[type=checkbox]:focus:not(:focus-visible) {
+  outline: solid 1px transparent;
 }
 
-.markdown-body hr:before,
-.markdown-body hr:after {
-  display: table;
-  content: " ";
+.markdown-body a:focus-visible,
+.markdown-body [role=button]:focus-visible,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline: 2px solid var(--color-accent-fg);
+  outline-offset: -2px;
+  box-shadow: none;
 }
 
-.markdown-body hr:after {
-  clear: both;
+.markdown-body a:not([class]):focus,
+.markdown-body a:not([class]):focus-visible,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline-offset: 0;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  line-height: 10px;
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  background-color: var(--color-canvas-subtle);
+  border: solid 1px var(--color-neutral-muted);
+  border-bottom-color: var(--color-neutral-muted);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 var(--color-neutral-muted);
 }
 
 .markdown-body h1,
@@ -225,44 +411,57 @@ body .markdown-body
 .markdown-body h4,
 .markdown-body h5,
 .markdown-body h6 {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  line-height: 1.1;
-}
-
-.markdown-body h1 {
-  font-size: 30px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: var(--base-text-weight-semibold, 600);
+  line-height: 1.25;
 }
 
 .markdown-body h2 {
-  font-size: 21px;
+  font-weight: var(--base-text-weight-semibold, 600);
+  padding-bottom: .3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--color-border-muted);
 }
 
 .markdown-body h3 {
-  font-size: 16px;
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: 1.25em;
 }
 
 .markdown-body h4 {
-  font-size: 14px;
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: 1em;
 }
 
 .markdown-body h5 {
-  font-size: 12px;
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: .875em;
 }
 
 .markdown-body h6 {
-  font-size: 11px;
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: .85em;
+  color: var(--color-fg-muted);
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .markdown-body blockquote {
   margin: 0;
+  padding: 0 1em;
+  color: var(--color-fg-muted);
+  border-left: .25em solid var(--color-border-default);
 }
 
 .markdown-body ul,
 .markdown-body ol {
-  padding: 0;
   margin-top: 0;
   margin-bottom: 0;
+  padding-left: 2em;
 }
 
 .markdown-body ol ol,
@@ -281,31 +480,48 @@ body .markdown-body
   margin-left: 0;
 }
 
+.markdown-body tt,
 .markdown-body code,
-.markdown-body pre,
 .markdown-body samp {
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
   font-size: 12px;
 }
 
 .markdown-body pre {
   margin-top: 0;
   margin-bottom: 0;
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-size: 12px;
+  word-wrap: normal;
 }
 
-.markdown-body kbd {
-  background-color: #e7e7e7;
-  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
-  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
-  background-image: linear-gradient(#fefefe, #e7e7e7);
-  background-repeat: repeat-x;
-  border-radius: 2px;
-  border: 1px solid #cfcfcf;
-  color: #000;
-  padding: 3px 5px;
-  line-height: 10px;
-  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+.markdown-body .octicon {
   display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-body input::-webkit-outer-spin-button,
+.markdown-body input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body .mr-2 {
+  margin-right: var(--base-size-8, 8px) !important;
+}
+
+.markdown-body::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body::after {
+  display: table;
+  clear: both;
+  content: "";
 }
 
 .markdown-body>*:first-child {
@@ -316,80 +532,24 @@ body .markdown-body
   margin-bottom: 0 !important;
 }
 
-.markdown-body .headerlink {
-  font: normal 400 16px fontawesome-mini;
-  vertical-align: middle;
-  margin-left: -16px;
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .absent {
+  color: var(--color-danger-fg);
+}
+
+.markdown-body .anchor {
   float: left;
-  display: inline-block;
-  text-decoration: none;
-  opacity: 0;
-  color: #333;
+  padding-right: 4px;
+  margin-left: -20px;
+  line-height: 1;
 }
 
-.markdown-body .headerlink:focus {
+.markdown-body .anchor:focus {
   outline: none;
-}
-
-.markdown-body h1 .headerlink {
-  margin-top: 0.8rem;
-}
-
-.markdown-body h2 .headerlink,
-.markdown-body h3 .headerlink {
-  margin-top: 0.6rem;
-}
-
-.markdown-body h4 .headerlink {
-  margin-top: 0.2rem;
-}
-
-.markdown-body h5 .headerlink,
-.markdown-body h6 .headerlink {
-  margin-top: 0;
-}
-
-.markdown-body .headerlink:hover,
-.markdown-body h1:hover .headerlink,
-.markdown-body h2:hover .headerlink,
-.markdown-body h3:hover .headerlink,
-.markdown-body h4:hover .headerlink,
-.markdown-body h5:hover .headerlink,
-.markdown-body h6:hover .headerlink {
-  opacity: 1;
-  text-decoration: none;
-}
-
-.markdown-body h1 {
-  padding-bottom: 0.3em;
-  font-size: 2.25em;
-  line-height: 1.2;
-  border-bottom: 1px solid #eee;
-}
-
-.markdown-body h2 {
-  padding-bottom: 0.3em;
-  font-size: 1.75em;
-  line-height: 1.225;
-  border-bottom: 1px solid #eee;
-}
-
-.markdown-body h3 {
-  font-size: 1.5em;
-  line-height: 1.43;
-}
-
-.markdown-body h4 {
-  font-size: 1.25em;
-}
-
-.markdown-body h5 {
-  font-size: 1em;
-}
-
-.markdown-body h6 {
-  font-size: 1em;
-  color: #777;
 }
 
 .markdown-body p,
@@ -399,22 +559,116 @@ body .markdown-body
 .markdown-body dl,
 .markdown-body table,
 .markdown-body pre,
-.markdown-body .admonition {
+.markdown-body details {
   margin-top: 0;
   margin-bottom: 16px;
 }
 
-.markdown-body hr {
-  height: 4px;
-  padding: 0;
-  margin: 16px 0;
-  background-color: #e7e7e7;
-  border: 0 none;
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
 }
 
-.markdown-body ul,
-.markdown-body ol {
-  padding-left: 2em;
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 tt,
+.markdown-body h1 code,
+.markdown-body h2 tt,
+.markdown-body h2 code,
+.markdown-body h3 tt,
+.markdown-body h3 code,
+.markdown-body h4 tt,
+.markdown-body h4 code,
+.markdown-body h5 tt,
+.markdown-body h5 code,
+.markdown-body h6 tt,
+.markdown-body h6 code {
+  padding: 0 .2em;
+  font-size: inherit;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2,
+.markdown-body summary h3,
+.markdown-body summary h4,
+.markdown-body summary h5,
+.markdown-body summary h6 {
+  display: inline-block;
+}
+
+.markdown-body summary h1 .anchor,
+.markdown-body summary h2 .anchor,
+.markdown-body summary h3 .anchor,
+.markdown-body summary h4 .anchor,
+.markdown-body summary h5 .anchor,
+.markdown-body summary h6 .anchor {
+  margin-left: -40px;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2 {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.markdown-body ul.no-list,
+.markdown-body ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.markdown-body ol[type="a s"] {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body ol[type="A s"] {
+  list-style-type: upper-alpha;
+}
+
+.markdown-body ol[type="i s"] {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol[type="I s"] {
+  list-style-type: upper-roman;
+}
+
+.markdown-body ol[type="1"] {
+  list-style-type: decimal;
+}
+
+.markdown-body div>ol:not([type]) {
+  list-style-type: decimal;
 }
 
 .markdown-body ul ul,
@@ -429,6 +683,10 @@ body .markdown-body
   margin-top: 16px;
 }
 
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
 .markdown-body dl {
   padding: 0;
 }
@@ -438,7 +696,7 @@ body .markdown-body
   margin-top: 16px;
   font-size: 1em;
   font-style: italic;
-  font-weight: bold;
+  font-weight: var(--base-text-weight-semibold, 600);
 }
 
 .markdown-body dl dd {
@@ -446,839 +704,759 @@ body .markdown-body
   margin-bottom: 16px;
 }
 
-.markdown-body blockquote {
-  padding: 0 15px;
-  color: #777;
-  border-left: 4px solid #ddd;
-}
-
-.markdown-body blockquote>:first-child {
-  margin-top: 0;
-}
-
-.markdown-body blockquote>:last-child {
-  margin-bottom: 0;
-}
-
-.markdown-body table {
-  display: block;
-  width: 100%;
-  overflow: auto;
-  word-break: normal;
-  word-break: keep-all;
-}
-
 .markdown-body table th {
-  font-weight: bold;
+  font-weight: var(--base-text-weight-semibold, 600);
 }
 
 .markdown-body table th,
 .markdown-body table td {
   padding: 6px 13px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-border-default);
+}
+
+.markdown-body table td>:last-child {
+  margin-bottom: 0;
 }
 
 .markdown-body table tr {
-  background-color: #fff;
-  border-top: 1px solid #ccc;
+  background-color: var(--color-canvas-default);
+  border-top: 1px solid var(--color-border-muted);
 }
 
 .markdown-body table tr:nth-child(2n) {
-  background-color: #f8f8f8;
+  background-color: var(--color-canvas-subtle);
 }
 
-.markdown-body img {
-  max-width: 100%;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+.markdown-body table img {
+  background-color: transparent;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body .emoji {
+  max-width: none;
+  vertical-align: text-top;
+  background-color: transparent;
+}
+
+.markdown-body span.frame {
+  display: block;
+  overflow: hidden;
+}
+
+.markdown-body span.frame>span {
+  display: block;
+  float: left;
+  width: auto;
+  padding: 7px;
+  margin: 13px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border-default);
+}
+
+.markdown-body span.frame span img {
+  display: block;
+  float: left;
+}
+
+.markdown-body span.frame span span {
+  display: block;
+  padding: 5px 0 0;
+  clear: both;
+  color: var(--color-fg-default);
+}
+
+.markdown-body span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-center>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.markdown-body span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.markdown-body span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-right>span {
+  display: block;
+  margin: 13px 0 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.markdown-body span.align-right span img {
+  margin: 0;
+  text-align: right;
+}
+
+.markdown-body span.float-left {
+  display: block;
+  float: left;
+  margin-right: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-left span {
+  margin: 13px 0 0;
+}
+
+.markdown-body span.float-right {
+  display: block;
+  float: right;
+  margin-left: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-right>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: right;
 }
 
 .markdown-body code,
-.markdown-body samp {
-  padding: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
+.markdown-body tt {
+  padding: .2em .4em;
   margin: 0;
   font-size: 85%;
-  border-radius: 3px;
+  white-space: break-spaces;
+  background-color: var(--color-neutral-muted);
+  border-radius: 6px;
 }
 
-.markdown-body code:not(.highlight):not(.codehilite), .markdown-body samp {
-  background-color: rgba(0,0,0,0.04);
+.markdown-body code br,
+.markdown-body tt br {
+  display: none;
 }
 
-.markdown-body code:before,
-.markdown-body code:after {
-  letter-spacing: -0.2em;
-  content: "\00a0";
+.markdown-body del code {
+  text-decoration: inherit;
+}
+
+.markdown-body samp {
+  font-size: 85%;
+}
+
+.markdown-body pre code {
+  font-size: 100%;
 }
 
 .markdown-body pre>code {
   padding: 0;
   margin: 0;
-  font-size: 100%;
   word-break: normal;
   white-space: pre;
   background: transparent;
   border: 0;
 }
 
-.markdown-body .codehilite,
 .markdown-body .highlight {
   margin-bottom: 16px;
 }
 
-.markdown-body .codehilite pre,
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
 .markdown-body .highlight pre,
 .markdown-body pre {
   padding: 16px;
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
+  color: var(--color-fg-default);
+  background-color: var(--color-canvas-subtle);
+  border-radius: 6px;
 }
 
-.markdown-body .codehilite,
-.markdown-body .highlight,
-.markdown-body pre {
-  border-radius: 3px;
-}
-
-.markdown-body :not(.highlight) > pre {
-  background-color: #f7f7f7;
-}
-
-.markdown-body .codehilite pre,
-.markdown-body .highlight pre {
-  margin-bottom: 0;
-  word-break: normal;
-}
-
-.markdown-body pre {
-  word-wrap: normal;
-}
-
-.markdown-body pre code {
+.markdown-body pre code,
+.markdown-body pre tt {
   display: inline;
-  max-width: initial;
+  max-width: auto;
   padding: 0;
   margin: 0;
-  overflow: initial;
+  overflow: visible;
   line-height: inherit;
   word-wrap: normal;
   background-color: transparent;
   border: 0;
 }
 
-.markdown-body pre code:before,
-.markdown-body pre code:after {
-  content: normal;
-}
-
-/* Admonition */
-.markdown-body .admonition {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  position: relative;
-  border-radius: 3px;
-  border: 1px solid #e0e0e0;
-  border-left: 6px solid #333;
-  padding: 10px 10px 10px 30px;
-}
-
-.markdown-body .admonition table {
-  color: #333;
-}
-
-.markdown-body .admonition p {
-  padding: 0;
-}
-
-.markdown-body .admonition-title {
-  font-weight: bold;
-  margin: 0;
-}
-
-.markdown-body .admonition>.admonition-title {
-  color: #333;
-}
-
-.markdown-body .attention>.admonition-title {
-  color: #a6d796;
-}
-
-.markdown-body .caution>.admonition-title {
-  color: #d7a796;
-}
-
-.markdown-body .hint>.admonition-title {
-  color: #96c6d7;
-}
-
-.markdown-body .danger>.admonition-title {
-  color: #c25f77;
-}
-
-.markdown-body .question>.admonition-title {
-  color: #96a6d7;
-}
-
-.markdown-body .note>.admonition-title {
-  color: #d7c896;
-}
-
-.markdown-body .admonition:before,
-.markdown-body .attention:before,
-.markdown-body .caution:before,
-.markdown-body .hint:before,
-.markdown-body .danger:before,
-.markdown-body .question:before,
-.markdown-body .note:before {
-  font: normal normal 16px fontawesome-mini;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  line-height: 1.5;
-  color: #333;
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding-top: 10px;
-  padding-left: 10px;
-}
-
-.markdown-body .admonition:before {
-  content: "\f056\00a0";
-  color: 333;
-}
-
-.markdown-body .attention:before {
-  content: "\f058\00a0";
-  color: #a6d796;
-}
-
-.markdown-body .caution:before {
-  content: "\f06a\00a0";
-  color: #d7a796;
-}
-
-.markdown-body .hint:before {
-  content: "\f05a\00a0";
-  color: #96c6d7;
-}
-
-.markdown-body .danger:before {
-  content: "\f057\00a0";
-  color: #c25f77;
-}
-
-.markdown-body .question:before {
-  content: "\f059\00a0";
-  color: #96a6d7;
-}
-
-.markdown-body .note:before {
-  content: "\f040\00a0";
-  color: #d7c896;
-}
-
-.markdown-body .admonition::after {
-  content: normal;
-}
-
-.markdown-body .attention {
-  border-left: 6px solid #a6d796;
-}
-
-.markdown-body .caution {
-  border-left: 6px solid #d7a796;
-}
-
-.markdown-body .hint {
-  border-left: 6px solid #96c6d7;
-}
-
-.markdown-body .danger {
-  border-left: 6px solid #c25f77;
-}
-
-.markdown-body .question {
-  border-left: 6px solid #96a6d7;
-}
-
-.markdown-body .note {
-  border-left: 6px solid #d7c896;
-}
-
-.markdown-body .admonition>*:first-child {
-  margin-top: 0 !important;
-}
-
-.markdown-body .admonition>*:last-child {
-  margin-bottom: 0 !important;
-}
-
-/* progress bar*/
-.markdown-body .progress {
-  display: block;
-  width: 300px;
-  margin: 10px 0;
-  height: 24px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background-color: #ededed;
-  position: relative;
-  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
-}
-
-.markdown-body .progress-label {
-  position: absolute;
-  text-align: center;
-  font-weight: bold;
-  width: 100%; margin: 0;
-  line-height: 24px;
-  color: #333;
-  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
-  -webkit-font-smoothing: antialiased !important;
-  white-space: nowrap;
+.markdown-body .csv-data td,
+.markdown-body .csv-data th {
+  padding: 5px;
   overflow: hidden;
-}
-
-.markdown-body .progress-bar {
-  height: 24px;
-  float: left;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background-color: #96c6d7;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
-  background-size: 30px 30px;
-  background-image: -webkit-linear-gradient(
-    135deg, rgba(255, 255, 255, .4) 27%,
-    transparent 27%,
-    transparent 52%, rgba(255, 255, 255, .4) 52%,
-    rgba(255, 255, 255, .4) 77%,
-    transparent 77%, transparent
-  );
-  background-image: -moz-linear-gradient(
-    135deg,
-    rgba(255, 255, 255, .4) 27%, transparent 27%,
-    transparent 52%, rgba(255, 255, 255, .4) 52%,
-    rgba(255, 255, 255, .4) 77%, transparent 77%,
-    transparent
-  );
-  background-image: -ms-linear-gradient(
-    135deg,
-    rgba(255, 255, 255, .4) 27%, transparent 27%,
-    transparent 52%, rgba(255, 255, 255, .4) 52%,
-    rgba(255, 255, 255, .4) 77%, transparent 77%,
-    transparent
-  );
-  background-image: -o-linear-gradient(
-    135deg,
-    rgba(255, 255, 255, .4) 27%, transparent 27%,
-    transparent 52%, rgba(255, 255, 255, .4) 52%,
-    rgba(255, 255, 255, .4) 77%, transparent 77%,
-    transparent
-  );
-  background-image: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, .4) 27%, transparent 27%,
-    transparent 52%, rgba(255, 255, 255, .4) 52%,
-    rgba(255, 255, 255, .4) 77%, transparent 77%,
-    transparent
-  );
-}
-
-.markdown-body .progress-100plus .progress-bar {
-  background-color: #a6d796;
-}
-
-.markdown-body .progress-80plus .progress-bar {
-  background-color: #c6d796;
-}
-
-.markdown-body .progress-60plus .progress-bar {
-  background-color: #d7c896;
-}
-
-.markdown-body .progress-40plus .progress-bar {
-  background-color: #d7a796;
-}
-
-.markdown-body .progress-20plus .progress-bar {
-  background-color: #d796a6;
-}
-
-.markdown-body .progress-0plus .progress-bar {
-  background-color: #c25f77;
-}
-
-.markdown-body .candystripe-animate .progress-bar{
-  -webkit-animation: animate-stripes 3s linear infinite;
-  -moz-animation: animate-stripes 3s linear infinite;
-  animation: animate-stripes 3s linear infinite;
-}
-
-@-webkit-keyframes animate-stripes {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 60px 0;
-  }
-}
-
-@-moz-keyframes animate-stripes {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 60px 0;
-  }
-}
-
-@keyframes animate-stripes {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 60px 0;
-  }
-}
-
-.markdown-body .gloss .progress-bar {
-  box-shadow:
-    inset 0 4px 12px rgba(255, 255, 255, .7),
-    inset 0 -12px 0 rgba(0, 0, 0, .05);
-}
-
-/* MultiMarkdown Critic Blocks */
-.markdown-body .critic_mark {
-  background: #ff0;
-}
-
-.markdown-body .critic_delete {
-  color: #c82829;
-  text-decoration: line-through;
-}
-
-.markdown-body .critic_insert {
-  color: #718c00 ;
-  text-decoration: underline;
-}
-
-.markdown-body .critic_comment {
-  color: #8e908c;
-  font-style: italic;
-}
-
-.markdown-body .headeranchor {
-  font: normal normal 16px fontawesome-mini;
+  font-size: 12px;
   line-height: 1;
-  display: inline-block;
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  text-align: left;
+  white-space: nowrap;
 }
 
-.headeranchor:before {
-  content: '\e157';
+.markdown-body .csv-data .blob-num {
+  padding: 10px 8px 9px;
+  text-align: right;
+  background: var(--color-canvas-default);
+  border: 0;
+}
+
+.markdown-body .csv-data tr {
+  border-top: 0;
+}
+
+.markdown-body .csv-data th {
+  font-weight: var(--base-text-weight-semibold, 600);
+  background: var(--color-canvas-subtle);
+  border-top: 0;
+}
+
+.markdown-body [data-footnote-ref]::before {
+  content: "[";
+}
+
+.markdown-body [data-footnote-ref]::after {
+  content: "]";
+}
+
+.markdown-body .footnotes {
+  font-size: 12px;
+  color: var(--color-fg-muted);
+  border-top: 1px solid var(--color-border-default);
+}
+
+.markdown-body .footnotes ol {
+  padding-left: 16px;
+}
+
+.markdown-body .footnotes ol ul {
+  display: inline-block;
+  padding-left: 16px;
+  margin-top: 16px;
+}
+
+.markdown-body .footnotes li {
+  position: relative;
+}
+
+.markdown-body .footnotes li:target::before {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -24px;
+  pointer-events: none;
+  content: "";
+  border: 2px solid var(--color-accent-emphasis);
+  border-radius: 6px;
+}
+
+.markdown-body .footnotes li:target {
+  color: var(--color-fg-default);
+}
+
+.markdown-body .footnotes .data-footnote-backref g-emoji {
+  font-family: monospace;
+}
+
+.markdown-body .pl-c {
+  color: var(--color-prettylights-syntax-comment);
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: var(--color-prettylights-syntax-constant);
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: var(--color-prettylights-syntax-entity);
+}
+
+.markdown-body .pl-smi,
+.markdown-body .pl-s .pl-s1 {
+  color: var(--color-prettylights-syntax-storage-modifier-import);
+}
+
+.markdown-body .pl-ent {
+  color: var(--color-prettylights-syntax-entity-tag);
+}
+
+.markdown-body .pl-k {
+  color: var(--color-prettylights-syntax-keyword);
+}
+
+.markdown-body .pl-s,
+.markdown-body .pl-pds,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sre,
+.markdown-body .pl-sr .pl-sra {
+  color: var(--color-prettylights-syntax-string);
+}
+
+.markdown-body .pl-v,
+.markdown-body .pl-smw {
+  color: var(--color-prettylights-syntax-variable);
+}
+
+.markdown-body .pl-bu {
+  color: var(--color-prettylights-syntax-brackethighlighter-unmatched);
+}
+
+.markdown-body .pl-ii {
+  color: var(--color-prettylights-syntax-invalid-illegal-text);
+  background-color: var(--color-prettylights-syntax-invalid-illegal-bg);
+}
+
+.markdown-body .pl-c2 {
+  color: var(--color-prettylights-syntax-carriage-return-text);
+  background-color: var(--color-prettylights-syntax-carriage-return-bg);
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-string-regexp);
+}
+
+.markdown-body .pl-ml {
+  color: var(--color-prettylights-syntax-markup-list);
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-heading);
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: var(--color-prettylights-syntax-markup-italic);
+}
+
+.markdown-body .pl-mb {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-bold);
+}
+
+.markdown-body .pl-md {
+  color: var(--color-prettylights-syntax-markup-deleted-text);
+  background-color: var(--color-prettylights-syntax-markup-deleted-bg);
+}
+
+.markdown-body .pl-mi1 {
+  color: var(--color-prettylights-syntax-markup-inserted-text);
+  background-color: var(--color-prettylights-syntax-markup-inserted-bg);
+}
+
+.markdown-body .pl-mc {
+  color: var(--color-prettylights-syntax-markup-changed-text);
+  background-color: var(--color-prettylights-syntax-markup-changed-bg);
+}
+
+.markdown-body .pl-mi2 {
+  color: var(--color-prettylights-syntax-markup-ignored-text);
+  background-color: var(--color-prettylights-syntax-markup-ignored-bg);
+}
+
+.markdown-body .pl-mdr {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-meta-diff-range);
+}
+
+.markdown-body .pl-ba {
+  color: var(--color-prettylights-syntax-brackethighlighter-angle);
+}
+
+.markdown-body .pl-sg {
+  color: var(--color-prettylights-syntax-sublimelinter-gutter-mark);
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: var(--color-prettylights-syntax-constant-other-reference-link);
+}
+
+.markdown-body g-emoji {
+  display: inline-block;
+  min-width: 1ch;
+  font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1em;
+  font-style: normal !important;
+  font-weight: var(--base-text-weight-normal, 400);
+  line-height: 1;
+  vertical-align: -0.075em;
+}
+
+.markdown-body g-emoji img {
+  width: 1em;
+  height: 1em;
 }
 
 .markdown-body .task-list-item {
   list-style-type: none;
 }
 
-.markdown-body .task-list-item+.task-list-item {
-  margin-top: 3px;
+.markdown-body .task-list-item label {
+  font-weight: var(--base-text-weight-normal, 400);
 }
 
-.markdown-body .task-list-item input {
-  margin: 0 4px 0.25em -20px;
+.markdown-body .task-list-item.enabled label {
+  cursor: pointer;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 4px;
+}
+
+.markdown-body .task-list-item .handle {
+  display: none;
+}
+
+.markdown-body .task-list-item-checkbox {
+  margin: 0 .2em .25em -1.4em;
   vertical-align: middle;
 }
 
-.markdown-body diagram-div, .markdown-body div.uml-sequence-diagram, .markdown-body, div.uml-flowchart {
-  overflow: auto;
+.markdown-body .contains-task-list:dir(rtl) .task-list-item-checkbox {
+  margin: 0 -1.6em .25em .2em;
 }
 
-/* Media */
-@media only screen and (min-width: 480px) {
-  .markdown-body {
-    font-size:14px;
-  }
+.markdown-body .contains-task-list {
+  position: relative;
 }
 
-@media only screen and (min-width: 768px) {
-  .markdown-body {
-    font-size:16px;
-  }
+.markdown-body .contains-task-list:hover .task-list-item-convert-container,
+.markdown-body .contains-task-list:focus-within .task-list-item-convert-container {
+  display: block;
+  width: auto;
+  height: 24px;
+  overflow: visible;
+  clip: auto;
 }
 
-@media print {
-  .markdown-body * {
-    background: transparent !important;
-    color: black !important;
-    filter:none !important;
-    -ms-filter: none !important;
-  }
-
-  .markdown-body {
-    font-size:12pt;
-    max-width:100%;
-    outline:none;
-    border: 0;
-  }
-
-  .markdown-body a,
-  .markdown-body a:visited {
-    text-decoration: underline;
-  }
-
-  .markdown-body .headeranchor-link {
-    display: none;
-  }
-
-  .markdown-body a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  .markdown-body abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  .markdown-body .ir a:after,
-  .markdown-body a[href^="javascript:"]:after,
-  .markdown-body a[href^="#"]:after {
-    content: "";
-  }
-
-  .markdown-body pre {
-    white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
-
-  .markdown-body pre,
-  .markdown-body blockquote {
-    border: 1px solid #999;
-    padding-right: 1em;
-    page-break-inside: avoid;
-  }
-
-  .markdown-body .progress,
-  .markdown-body .progress-bar {
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-
-  .markdown-body .progress {
-    border: 1px solid #ddd;
-  }
-
-  .markdown-body .progress-bar {
-    height: 22px;
-    border-right: 1px solid #ddd;
-  }
-
-  .markdown-body tr,
-  .markdown-body img {
-    page-break-inside: avoid;
-  }
-
-  .markdown-body img {
-    max-width: 100% !important;
-  }
-
-  .markdown-body p,
-  .markdown-body h2,
-  .markdown-body h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  .markdown-body h2,
-  .markdown-body h3 {
-    page-break-after: avoid;
-  }
+.markdown-body ::-webkit-calendar-picker-indicator {
+  filter: invert(50%);
 }
-</style><style>/*GitHub*/
-.highlight {background-color:#f7f7f7;color:#333333;}
-.highlight .hll {background-color:#ffffcc;}
-.highlight .c{color:#999988;font-style:italic}
-.highlight .err{color:#a61717;background-color:#e3d2d2}
-.highlight .k{font-weight:bold}
-.highlight .o{font-weight:bold}
-.highlight .cm{color:#999988;font-style:italic}
-.highlight .cp{color:#999999;font-weight:bold}
-.highlight .c1{color:#999988;font-style:italic}
-.highlight .cs{color:#999999;font-weight:bold;font-style:italic}
-.highlight .gd{color:#000000;background-color:#ffdddd}
-.highlight .ge{font-style:italic}
-.highlight .gr{color:#aa0000}
-.highlight .gh{color:#999999}
-.highlight .gi{color:#000000;background-color:#ddffdd}
-.highlight .go{color:#888888}
-.highlight .gp{color:#555555}
-.highlight .gs{font-weight:bold}
-.highlight .gu{color:#800080;font-weight:bold}
-.highlight .gt{color:#aa0000}
-.highlight .kc{font-weight:bold}
-.highlight .kd{font-weight:bold}
-.highlight .kn{font-weight:bold}
-.highlight .kp{font-weight:bold}
-.highlight .kr{font-weight:bold}
-.highlight .kt{color:#445588;font-weight:bold}
-.highlight .m{color:#009999}
-.highlight .s{color:#dd1144}
-.highlight .n{color:#333333}
-.highlight .na{color:teal}
-.highlight .nb{color:#0086b3}
-.highlight .nc{color:#445588;font-weight:bold}
-.highlight .no{color:teal}
-.highlight .ni{color:purple}
-.highlight .ne{color:#990000;font-weight:bold}
-.highlight .nf{color:#990000;font-weight:bold}
-.highlight .nn{color:#555555}
-.highlight .nt{color:navy}
-.highlight .nv{color:teal}
-.highlight .ow{font-weight:bold}
-.highlight .w{color:#bbbbbb}
-.highlight .mf{color:#009999}
-.highlight .mh{color:#009999}
-.highlight .mi{color:#009999}
-.highlight .mo{color:#009999}
-.highlight .sb{color:#dd1144}
-.highlight .sc{color:#dd1144}
-.highlight .sd{color:#dd1144}
-.highlight .s2{color:#dd1144}
-.highlight .se{color:#dd1144}
-.highlight .sh{color:#dd1144}
-.highlight .si{color:#dd1144}
-.highlight .sx{color:#dd1144}
-.highlight .sr{color:#009926}
-.highlight .s1{color:#dd1144}
-.highlight .ss{color:#990073}
-.highlight .bp{color:#999999}
-.highlight .vc{color:teal}
-.highlight .vg{color:teal}
-.highlight .vi{color:teal}
-.highlight .il{color:#009999}
-.highlight .gc{color:#999;background-color:#EAF2F5}
-</style><title>README</title></head><body><article class="markdown-body"><h1 id="jumper-excercise-ml-agents">Jumper excercise ml-agents<a class="headerlink" href="#jumper-excercise-ml-agents" title="Permanent link"></a></h1>
+
+.markdown-body .markdown-alert {
+  padding: var(--base-size-8, 8px) var(--base-size-16, 16px);
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid var(--color-border-default);
+}
+
+.markdown-body .markdown-alert>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body .markdown-alert>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body .markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: var(--base-text-weight-medium, 500);
+  align-items: center;
+  line-height: 1;
+}
+
+.markdown-body .markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-accent-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-accent-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-done-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-done-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-attention-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-attention-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-success-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-success-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-danger-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-danger-fg);
+}
+</style><title>README</title></head><body><article class="markdown-body"><div class="markdown-heading"><h1 class="heading-element">Jumper excercise ml-agents</h1><a id="user-content-jumper-excercise-ml-agents" class="anchor" aria-label="Permalink: Jumper excercise ml-agents" href="#jumper-excercise-ml-agents"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
 <p>Gemaakt door: Brent Van Daele</p>
-<h2 id="uitleg">Uitleg<a class="headerlink" href="#uitleg" title="Permanent link"></a></h2>
-<p>Deze oefening is de basis om aan te leren hoe een ml-agetn getrained kan worden voor complexere doeleinden. Zo zal de agent in plaats van enkel te wandelen, zals in vorige opgaven, nu moeten springen over aankomende obstakels. Het basis idee bestaat eruit dat de agent moet springen over een opstakel dat uit één richting komt en een variërende snelheid kan hebben. Als uitbereiding heeft deze versie dat de agent over een obstakel moet sprongen dat uit 2 richtingen kan komen, ook met variërende snelheid.</p>
-<h2 id="uitvoering">Uitvoering<a class="headerlink" href="#uitvoering" title="Permanent link"></a></h2>
-<p>Om tot het gewenst resultat te bekomen zullen volgende stappen doorlopen worden.</p>
-<h3 id="omgeving">Omgeving<a class="headerlink" href="#omgeving" title="Permanent link"></a></h3>
-<p>Om te starten wordt er een omgeving aan gemaakt in unity waar er een plain als floor wordt toegevoegd gevolgdd door 3 kubussen, namelijk de agent en twee obstakel. Hiernaa wordt er een kleur toegewezen om de objecten uitelkaar te houden en wordem de obstakels naar de juiste grootte gebracht.</p>
-<p><img alt="Opstelling" src="/G:/Documents/ICT_AP/Local/VR/w1/jumper-assignment-BrentVanDaele/Pictures/Enviroment.png" /></p>
-<h3 id="scripts">Scripts<a class="headerlink" href="#scripts" title="Permanent link"></a></h3>
-<p>Volgende scripts worden gebruikt om de mlagent tot leven te wekken.</p>
-<h4 id="obstakel">Obstakel<a class="headerlink" href="#obstakel" title="Permanent link"></a></h4>
-<p>In deze code wordt in de Start functie het object op de juiste plaats gezet en op de juiste grootte. Ook wordt hier een random snelheid gekozen tussen 2 bepaalde waarden die meegegeven kunnen worden. In de Update functie wordt het opject verplaatst met de gekozen snelheid tot het het einde bereikt van de floor plane. Dit geld voor beide obstakels.</p>
-<div class="highlight"><pre><span class="k">using</span> <span class="nn">UnityEditor.Experimental.GraphView</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
+<div class="markdown-heading"><h2 class="heading-element">Uitleg</h2><a id="user-content-uitleg" class="anchor" aria-label="Permalink: Uitleg" href="#uitleg"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Deze oefening is de basis om aan te leren hoe een ml-agent getraind kan worden voor complexere doeleinden. Zo zal de agent in plaats van enkel te wandelen, zoals in vorige opgaven, nu moeten springen over aankomende obstakels. Het basisidee bestaat eruit dat de agent moet springen over een obstakel dat uit één richting komt en een variërende snelheid kan hebben. Als uitbereiding heeft deze versie dat de agent over een obstakel moet sprongen dat uit 2 richtingen kan komen, ook met variërende snelheid.</p>
+<div class="markdown-heading"><h2 class="heading-element">Uitvoering</h2><a id="user-content-uitvoering" class="anchor" aria-label="Permalink: Uitvoering" href="#uitvoering"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Om tot het gewenst resultaat te bekomen zullen volgende stappen doorlopen worden.</p>
+<div class="markdown-heading"><h3 class="heading-element">Omgeving</h3><a id="user-content-omgeving" class="anchor" aria-label="Permalink: Omgeving" href="#omgeving"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Om te starten wordt er een omgeving aan gemaakt in Unity waar er een plane als floor wordt toegevoegd gevolgd door 3 kubussen, namelijk de agent en twee obstakel. Hierna wordt er een kleur toegewezen om de objecten uit elkaar te houden en worden de obstakels naar de juiste grootte gebracht.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="/C:/Users/brent/Documents/AP/Local/2ITIOT1/VR%20Experience/jumper-assignment-BrentVanDaele/Pictures/Enviroment.PNG"><img src="/C:/Users/brent/Documents/AP/Local/2ITIOT1/VR%20Experience/jumper-assignment-BrentVanDaele/Pictures/Enviroment.PNG" alt="Opstelling" style="max-width: 100%;"></a></p>
+<div class="markdown-heading"><h3 class="heading-element">Scripts</h3><a id="user-content-scripts" class="anchor" aria-label="Permalink: Scripts" href="#scripts"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Volgende scripts worden gebruikt om de ml-agent tot leven te wekken. Extra info kwam van eerdere labo’s en gegeven documentatie (Van Daele, 2025) (Peeters, 2025).</p>
+<div class="markdown-heading"><h4 class="heading-element">Obstakel</h4><a id="user-content-obstakel" class="anchor" aria-label="Permalink: Obstakel" href="#obstakel"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>In deze code wordt in de Start functie het object op de juiste plaats gezet en op de juiste grootte. Ook wordt hier een random snelheid gekozen tussen 2 bepaalde waarden die meegegeven kunnen worden. In de Update-functie wordt het object verplaatst met de gekozen snelheid tot het einde bereikt van de floor plane. Dit geld voor beide obstakels.</p>
+<div class="highlight highlight-source-cs"><pre><span class="pl-k">using</span> <span class="pl-s1">UnityEditor</span><span class="pl-kos">.</span><span class="pl-s1">Experimental</span><span class="pl-kos">.</span><span class="pl-s1">GraphView</span><span class="pl-kos">;</span>
+<span class="pl-k">using</span> <span class="pl-s1">UnityEngine</span><span class="pl-kos">;</span>
 
-<span class="k">namespace</span> <span class="nn">Assets.Scripts</span>
-<span class="p">{</span>
-    <span class="k">public</span> <span class="k">class</span> <span class="nc">ObstacleX</span> <span class="p">:</span> <span class="n">MonoBehaviour</span>
-    <span class="p">{</span>
-<span class="na">        [SerializeField]</span> <span class="kt">float</span> <span class="n">obstacleSpeedMin</span> <span class="p">=</span> <span class="m">0.001f</span><span class="p">;</span>
-<span class="na">        [SerializeField]</span> <span class="kt">float</span> <span class="n">obstacleSpeedMax</span> <span class="p">=</span> <span class="m">0.5f</span><span class="p">;</span>
-        <span class="k">private</span> <span class="kt">float</span> <span class="n">obstacleSpeed</span><span class="p">;</span>
+<span class="pl-k">namespace</span> <span class="pl-s1">Assets</span><span class="pl-kos">.</span><span class="pl-s1">Scripts</span>
+<span class="pl-kos">{</span>
+    <span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-smi">ObstacleX</span> <span class="pl-c1">:</span> <span class="pl-smi">MonoBehaviour</span>
+    <span class="pl-kos">{</span>
+        <span class="pl-kos">[</span><span class="pl-c1">SerializeField</span><span class="pl-kos">]</span> <span class="pl-smi">float</span> <span class="pl-s1">obstacleSpeedMin</span> <span class="pl-c1">=</span> <span class="pl-c1">0.001f</span><span class="pl-kos">;</span>
+        <span class="pl-kos">[</span><span class="pl-c1">SerializeField</span><span class="pl-kos">]</span> <span class="pl-smi">float</span> <span class="pl-s1">obstacleSpeedMax</span> <span class="pl-c1">=</span> <span class="pl-c1">0.5f</span><span class="pl-kos">;</span>
+        <span class="pl-k">private</span> <span class="pl-smi">float</span> <span class="pl-s1">obstacleSpeed</span><span class="pl-kos">;</span>
 
-        <span class="c1">// Start is called once before the first execution of Update after the MonoBehaviour is created</span>
-        <span class="k">void</span> <span class="nf">Start</span><span class="p">()</span>
-        <span class="p">{</span>
-            <span class="n">obstacleSpeed</span> <span class="p">=</span> <span class="n">Random</span><span class="p">.</span><span class="n">Range</span><span class="p">(</span><span class="n">obstacleSpeedMin</span><span class="p">,</span> <span class="n">obstacleSpeedMax</span><span class="p">);</span>
-            <span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">localPosition</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Vector3</span><span class="p">(-</span><span class="m">3.0f</span><span class="p">,</span> <span class="m">0.5f</span><span class="p">,</span> <span class="m">0f</span><span class="p">);</span>
-            <span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">localScale</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Vector3</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">8</span><span class="p">);</span>
-        <span class="p">}</span>
+        <span class="pl-c">// Start is called once before the first execution of Update after the MonoBehaviour is created</span>
+        <span class="pl-smi">void</span> <span class="pl-en">Start</span><span class="pl-kos">(</span><span class="pl-kos">)</span>
+        <span class="pl-kos">{</span>
+            <span class="pl-s1">obstacleSpeed</span> <span class="pl-c1">=</span> <span class="pl-s1">Random</span><span class="pl-kos">.</span><span class="pl-en">Range</span><span class="pl-kos">(</span><span class="pl-s1">obstacleSpeedMin</span><span class="pl-kos">,</span> <span class="pl-s1">obstacleSpeedMax</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+            <span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">localPosition</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-smi">Vector3</span><span class="pl-kos">(</span><span class="pl-c1">-</span><span class="pl-c1">3.0f</span><span class="pl-kos">,</span> <span class="pl-c1">0.5f</span><span class="pl-kos">,</span> <span class="pl-c1">0f</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+            <span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">localScale</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-smi">Vector3</span><span class="pl-kos">(</span><span class="pl-c1">1</span><span class="pl-kos">,</span> <span class="pl-c1">1</span><span class="pl-kos">,</span> <span class="pl-c1">8</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+        <span class="pl-kos">}</span>
 
-        <span class="c1">// Update is called once per frame</span>
-        <span class="k">void</span> <span class="nf">Update</span><span class="p">()</span>
-        <span class="p">{</span>
-            <span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">localPosition</span> <span class="p">+=</span> <span class="n">Vector3</span><span class="p">.</span><span class="n">right</span> <span class="p">*</span> <span class="n">obstacleSpeed</span><span class="p">;</span>
+        <span class="pl-c">// Update is called once per frame</span>
+        <span class="pl-smi">void</span> <span class="pl-en">Update</span><span class="pl-kos">(</span><span class="pl-kos">)</span>
+        <span class="pl-kos">{</span>
+            <span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">localPosition</span> <span class="pl-c1">+=</span> <span class="pl-s1">Vector3</span><span class="pl-kos">.</span><span class="pl-s1">right</span> <span class="pl-c1">*</span> <span class="pl-s1">obstacleSpeed</span><span class="pl-kos">;</span>
 
-            <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">localPosition</span><span class="p">.</span><span class="n">x</span> <span class="p">&gt;=</span> <span class="m">5.0f</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="n">Destroy</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">gameObject</span><span class="p">);</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
+            <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">localPosition</span><span class="pl-kos">.</span><span class="pl-s1">x</span> <span class="pl-c1">&gt;=</span> <span class="pl-c1">5.0f</span><span class="pl-kos">)</span>
+            <span class="pl-kos">{</span>
+                <span class="pl-s1">Destroy</span><span class="pl-kos">(</span><span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">gameObject</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+            <span class="pl-kos">}</span>
+        <span class="pl-kos">}</span>
+    <span class="pl-kos">}</span>
+<span class="pl-kos">}</span></pre></div>
+<div class="markdown-heading"><h4 class="heading-element">Agent</h4><a id="user-content-agent" class="anchor" aria-label="Permalink: Agent" href="#agent"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>De code die hier volgt is de code voor de agent. Een klein deel hiervan komt van chatGPT (chatgpt, 2025), namelijk de lijn "physics.raycast". Hier zal de prefab van het obstakel voor de episode geïnstantieerd worden in OnEpisodeBegin. Het obstakel wordt random gekozen van een lijst van obstakels. Vervolgens wordt de agent op de begin positie gezet en al zijn snelheden gereset. Ook wordt de rigidbody opgeslagen in variabele rb voor gemakkelijker gebruik in latere code.</p>
+<div class="highlight highlight-source-cs"><pre><span class="pl-k">using</span> <span class="pl-s1">Unity</span><span class="pl-kos">.</span><span class="pl-s1">MLAgents</span><span class="pl-kos">;</span>
+<span class="pl-k">using</span> <span class="pl-s1">UnityEngine</span><span class="pl-kos">;</span>
+<span class="pl-k">using</span> <span class="pl-s1">Unity</span><span class="pl-kos">.</span><span class="pl-s1">MLAgents</span><span class="pl-kos">.</span><span class="pl-s1">Sensors</span><span class="pl-kos">;</span>
+<span class="pl-k">using</span> <span class="pl-s1">Unity</span><span class="pl-kos">.</span><span class="pl-s1">MLAgents</span><span class="pl-kos">.</span><span class="pl-s1">Actuators</span><span class="pl-kos">;</span>
 
-<h4 id="agent">Agent<a class="headerlink" href="#agent" title="Permanent link"></a></h4>
-<p>De code die hier volgt is de code voor de agent. Hier zal de prefab van het obstakel voor de episode geïnstantieerd worden in OnEpisodeBegin. Het opstakel word random gekozen van een lijst van obstakels. Vervolgens word the agent op de begin positie gezet en al zijn snelheiden gereset. Ook wordt de rigidbody opgelsagen in variable rb voor gemakkelijker gebruik in latere code.</p>
-<div class="highlight"><pre><span class="k">using</span> <span class="nn">Unity.MLAgents</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">Unity.MLAgents.Sensors</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">Unity.MLAgents.Actuators</span><span class="p">;</span>
+<span class="pl-k">namespace</span> <span class="pl-s1">Assets</span><span class="pl-kos">.</span><span class="pl-s1">Scripts</span>
+<span class="pl-kos">{</span>
+    <span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-s1">CubeAgent</span> <span class="pl-c1">:</span> <span class="pl-smi">Agent</span>
+    <span class="pl-kos">{</span>
+        <span class="pl-k">private</span> <span class="pl-smi">Rigidbody</span> <span class="pl-s1">rb</span><span class="pl-kos">;</span>
+        <span class="pl-kos">[</span><span class="pl-c1">SerializeField</span><span class="pl-kos">]</span> <span class="pl-smi">GameObject</span><span class="pl-kos">[</span><span class="pl-kos">]</span> <span class="pl-s1">obstaclePrefabs</span><span class="pl-kos">;</span>
+        <span class="pl-k">private</span> <span class="pl-smi">GameObject</span> <span class="pl-s1">obstacle</span><span class="pl-kos">;</span>
 
-<span class="k">namespace</span> <span class="nn">Assets.Scripts</span>
-<span class="p">{</span>
-    <span class="k">public</span> <span class="k">class</span> <span class="nc">CubeAgent</span> <span class="p">:</span> <span class="n">Agent</span>
-    <span class="p">{</span>
-        <span class="k">private</span> <span class="n">Rigidbody</span> <span class="n">rb</span><span class="p">;</span>
-<span class="na">        [SerializeField]</span> <span class="n">GameObject</span><span class="p">[]</span> <span class="n">obstaclePrefabs</span><span class="p">;</span>
-        <span class="k">private</span> <span class="n">GameObject</span> <span class="n">obstacle</span><span class="p">;</span>
+        <span class="pl-k">public</span> <span class="pl-k">override</span> <span class="pl-smi">void</span> <span class="pl-en">OnEpisodeBegin</span><span class="pl-kos">(</span><span class="pl-kos">)</span>
+        <span class="pl-kos">{</span>
+            <span class="pl-s1">obstacle</span> <span class="pl-c1">=</span> <span class="pl-s1">Instantiate</span><span class="pl-kos">(</span><span class="pl-s1">obstaclePrefabs</span><span class="pl-kos">[</span><span class="pl-s1">Random</span><span class="pl-kos">.</span><span class="pl-en">Range</span><span class="pl-kos">(</span><span class="pl-c1">0</span><span class="pl-kos">,</span> <span class="pl-s1">obstaclePrefabs</span><span class="pl-kos">.</span><span class="pl-s1">Length</span><span class="pl-kos">)</span><span class="pl-kos">]</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+            <span class="pl-s1">rb</span> <span class="pl-c1">=</span> <span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-smi">GetComponent</span><span class="pl-c1">&lt;</span><span class="pl-smi">Rigidbody</span><span class="pl-c1">&gt;</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+            <span class="pl-s1">rb</span><span class="pl-kos">.</span><span class="pl-s1">linearVelocity</span> <span class="pl-c1">=</span> <span class="pl-s1">Vector3</span><span class="pl-kos">.</span><span class="pl-s1">zero</span><span class="pl-kos">;</span> <span class="pl-c">// Reset velocity to prevent weird physics</span>
+            <span class="pl-s1">rb</span><span class="pl-kos">.</span><span class="pl-s1">angularVelocity</span> <span class="pl-c1">=</span> <span class="pl-s1">Vector3</span><span class="pl-kos">.</span><span class="pl-s1">zero</span><span class="pl-kos">;</span>
+            <span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">localPosition</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-smi">Vector3</span><span class="pl-kos">(</span><span class="pl-c1">0</span><span class="pl-kos">,</span> <span class="pl-c1">0.6f</span><span class="pl-kos">,</span> <span class="pl-c1">0</span><span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// Reset position</span>
+            <span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">rotation</span> <span class="pl-c1">=</span> <span class="pl-s1">Quaternion</span><span class="pl-kos">.</span><span class="pl-en">LookRotation</span><span class="pl-kos">(</span><span class="pl-s1">Vector3</span><span class="pl-kos">.</span><span class="pl-s1">forward</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
 
-        <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">OnEpisodeBegin</span><span class="p">()</span>
-        <span class="p">{</span>
-            <span class="n">obstacle</span> <span class="p">=</span> <span class="n">Instantiate</span><span class="p">(</span><span class="n">obstaclePrefabs</span><span class="p">[</span><span class="n">Random</span><span class="p">.</span><span class="n">Range</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="n">obstaclePrefabs</span><span class="p">.</span><span class="n">Length</span><span class="p">)]);</span>
-            <span class="n">rb</span> <span class="p">=</span> <span class="k">this</span><span class="p">.</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">Rigidbody</span><span class="p">&gt;();</span>
-            <span class="n">rb</span><span class="p">.</span><span class="n">linearVelocity</span> <span class="p">=</span> <span class="n">Vector3</span><span class="p">.</span><span class="n">zero</span><span class="p">;</span> <span class="c1">// Reset velocity to prevent weird physics</span>
-            <span class="n">rb</span><span class="p">.</span><span class="n">angularVelocity</span> <span class="p">=</span> <span class="n">Vector3</span><span class="p">.</span><span class="n">zero</span><span class="p">;</span>
-            <span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">localPosition</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Vector3</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0.6f</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span> <span class="c1">// Reset position</span>
-            <span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span> <span class="p">=</span> <span class="n">Quaternion</span><span class="p">.</span><span class="n">LookRotation</span><span class="p">(</span><span class="n">Vector3</span><span class="p">.</span><span class="n">forward</span><span class="p">);</span>
+        <span class="pl-kos">}</span></pre></div>
+<p>In de CollectObservations functie worden alle observaties toegevoegd die de agent mag weten. Wat in deze situatie enkel zijn positie en spring snelheid is.</p>
+<div class="highlight highlight-source-cs"><pre>        <span class="pl-k">public</span> <span class="pl-k">override</span> <span class="pl-smi">void</span> <span class="pl-en">CollectObservations</span><span class="pl-kos">(</span><span class="pl-smi">VectorSensor</span> <span class="pl-s1">sensor</span><span class="pl-kos">)</span>
+        <span class="pl-kos">{</span>
+            <span class="pl-s1">sensor</span><span class="pl-kos">.</span><span class="pl-en">AddObservation</span><span class="pl-kos">(</span><span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">localPosition</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+            <span class="pl-s1">sensor</span><span class="pl-kos">.</span><span class="pl-en">AddObservation</span><span class="pl-kos">(</span><span class="pl-s1">rb</span><span class="pl-kos">.</span><span class="pl-s1">linearVelocity</span><span class="pl-kos">.</span><span class="pl-s1">y</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+        <span class="pl-kos">}</span></pre></div>
+<p>In de OnActionReceived functie wordt de logica beschreven die de agent moet uitvoeren. Hier wordt eerst de input van de agent opgehaald en dan gevolgd door het correct roteren (latere functie) van de agent om juist gericht naar de obstakels te kijken. Vervolgens wordt de jump actie uitgeschreven. Als de agent op de grond is (ook externe functie) en de ml aanduidt om te springen zal er een kleine kracht toegevoegd worden aan de rigidbody van de agent. Hier zal ook de afstand van het object bepaald worden om een goede reward of punishment te kunnen geven, wat via raycasting gebeurt. Ten slotte wordt hier ook de reward en punishment gegeven voor een succesvolle sprong (object == null) en als de agent van het platform valt.</p>
+<div class="highlight highlight-source-cs"><pre>        <span class="pl-k">public</span> <span class="pl-k">override</span> <span class="pl-smi">void</span> <span class="pl-en">OnActionReceived</span><span class="pl-kos">(</span><span class="pl-smi">ActionBuffers</span> <span class="pl-s1">actions</span><span class="pl-kos">)</span>
+        <span class="pl-kos">{</span>
+            <span class="pl-smi">float</span> <span class="pl-s1">jumpAction</span> <span class="pl-c1">=</span> <span class="pl-s1">actions</span><span class="pl-kos">.</span><span class="pl-s1">ContinuousActions</span><span class="pl-kos">[</span><span class="pl-c1">0</span><span class="pl-kos">]</span><span class="pl-kos">;</span>
 
-        <span class="p">}</span>
-</pre></div>
+            <span class="pl-s1">RotateCorrectly</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
 
-<p>In de CollectObservations functie worden alle observaties toegevoegd die de agent mag weten. Wat in deze situatie enkel zijn positie en spring snelheid is.
-<div class="highlight"><pre>        <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">CollectObservations</span><span class="p">(</span><span class="n">VectorSensor</span> <span class="n">sensor</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">sensor</span><span class="p">.</span><span class="n">AddObservation</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">localPosition</span><span class="p">);</span>
-            <span class="n">sensor</span><span class="p">.</span><span class="n">AddObservation</span><span class="p">(</span><span class="n">rb</span><span class="p">.</span><span class="n">linearVelocity</span><span class="p">.</span><span class="n">y</span><span class="p">);</span>
-        <span class="p">}</span>
-</pre></div></p>
-<p>In de OnActionReceived functie wordt de logica beschreven die de agent moet uitvoeren. Hier wordt eerst de input van de agent opgehaald en dan gevolgd door het correct roteren (latere functie) van de agent om juist gericht naar de obstakels te kijken. Vervolgens wordt de jump actie uitgeschreven. Als de agent op de grond is (ook externe functie) en de ml aanduid om te springen zal er een kleine kracht toegevoegd worden aan de rigidbody van de agent. Hier zal ook de afstand van het object bepaald worden om een goede reward of punishment te kunnen geven, wat via raycasting gebeurd. Ten slotte wordt hier ook de reward en punishment gegeven voor een successvolle sprong (object == null) en als de agent van het platform valt.
-<div class="highlight"><pre>        <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">OnActionReceived</span><span class="p">(</span><span class="n">ActionBuffers</span> <span class="n">actions</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="kt">float</span> <span class="n">jumpAction</span> <span class="p">=</span> <span class="n">actions</span><span class="p">.</span><span class="n">ContinuousActions</span><span class="p">[</span><span class="m">0</span><span class="p">];</span>
+            <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-s1">IsGrounded</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-c1">&amp;&amp;</span> <span class="pl-s1">jumpAction</span> <span class="pl-c1">&gt;</span> <span class="pl-c1">0.0f</span><span class="pl-kos">)</span>
+            <span class="pl-kos">{</span>
+                <span class="pl-s1">rb</span><span class="pl-kos">.</span><span class="pl-en">AddForce</span><span class="pl-kos">(</span><span class="pl-s1">Vector3</span><span class="pl-kos">.</span><span class="pl-s1">up</span> <span class="pl-c1">*</span> <span class="pl-s1">jumpAction</span><span class="pl-kos">,</span> <span class="pl-s1">ForceMode</span><span class="pl-kos">.</span><span class="pl-s1">Impulse</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
 
-            <span class="n">RotateCorrectly</span><span class="p">();</span>
+                <span class="pl-c">// get distance via raycasting</span>
+                <span class="pl-s1">Physics</span><span class="pl-kos">.</span><span class="pl-en">Raycast</span><span class="pl-kos">(</span><span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">position</span><span class="pl-kos">,</span> <span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">forward</span><span class="pl-kos">,</span> <span class="pl-k">out</span> <span class="pl-smi">RaycastHit</span> <span class="pl-s1">hitFront</span><span class="pl-kos">,</span> <span class="pl-c1">10f</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
 
-            <span class="k">if</span> <span class="p">(</span><span class="n">IsGrounded</span><span class="p">()</span> <span class="p">&amp;&amp;</span> <span class="n">jumpAction</span> <span class="p">&gt;</span> <span class="m">0.0f</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="n">rb</span><span class="p">.</span><span class="n">AddForce</span><span class="p">(</span><span class="n">Vector3</span><span class="p">.</span><span class="n">up</span> <span class="p">*</span> <span class="n">jumpAction</span><span class="p">,</span> <span class="n">ForceMode</span><span class="p">.</span><span class="n">Impulse</span><span class="p">);</span>
+                <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-s1">hitFront</span><span class="pl-kos">.</span><span class="pl-s1">distance</span> <span class="pl-c1">&lt;</span> <span class="pl-c1">1.5f</span><span class="pl-kos">)</span>
+                <span class="pl-kos">{</span>
+                    <span class="pl-s1">SetReward</span><span class="pl-kos">(</span><span class="pl-c1">0.5f</span><span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// Reward for correctly jumping close to an obstacle</span>
+                <span class="pl-kos">}</span>
+                <span class="pl-k">else</span>
+                <span class="pl-kos">{</span>
+                    <span class="pl-s1">SetReward</span><span class="pl-kos">(</span><span class="pl-c1">-</span><span class="pl-c1">0.4f</span><span class="pl-kos">)</span><span class="pl-kos">;</span> <span class="pl-c">// Punish to much jumping</span>
+                <span class="pl-kos">}</span>
+            <span class="pl-kos">}</span>
 
-                <span class="c1">// get distance via raycasting</span>
-                <span class="n">Physics</span><span class="p">.</span><span class="n">Raycast</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">forward</span><span class="p">,</span> <span class="k">out</span> <span class="n">RaycastHit</span> <span class="n">hitFront</span><span class="p">,</span> <span class="m">10f</span><span class="p">);</span>
+            <span class="pl-c">// If the obstacle is destroyed, reward the agent for completing the task</span>
+            <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-s1">obstacle</span> <span class="pl-c1">==</span> <span class="pl-c1">null</span><span class="pl-kos">)</span>
+            <span class="pl-kos">{</span>
+                <span class="pl-s1">SetReward</span><span class="pl-kos">(</span><span class="pl-c1">2.0f</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+                <span class="pl-s1">EndEpisode</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+            <span class="pl-kos">}</span>
 
-                <span class="k">if</span> <span class="p">(</span><span class="n">hitFront</span><span class="p">.</span><span class="n">distance</span> <span class="p">&lt;</span> <span class="m">1.5f</span><span class="p">)</span>
-                <span class="p">{</span>
-                    <span class="n">SetReward</span><span class="p">(</span><span class="m">0.5f</span><span class="p">);</span> <span class="c1">// Reward for correctly jumping close to an obstacle</span>
-                <span class="p">}</span>
-                <span class="k">else</span>
-                <span class="p">{</span>
-                    <span class="n">SetReward</span><span class="p">(-</span><span class="m">0.4f</span><span class="p">);</span> <span class="c1">// Punish to much jumping</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
+            <span class="pl-c">// If the agent falls down, penalize it</span>
+            <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">localPosition</span><span class="pl-kos">.</span><span class="pl-s1">y</span> <span class="pl-c1">&lt;=</span> <span class="pl-c1">-</span><span class="pl-c1">0.5f</span><span class="pl-kos">)</span>
+            <span class="pl-kos">{</span>
+                <span class="pl-s1">SetReward</span><span class="pl-kos">(</span><span class="pl-c1">-</span><span class="pl-c1">1.0f</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+                <span class="pl-s1">Destroy</span><span class="pl-kos">(</span><span class="pl-s1">obstacle</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+                <span class="pl-s1">EndEpisode</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+            <span class="pl-kos">}</span>
+        <span class="pl-kos">}</span></pre></div>
+<p>Wanneer de agent collides met het obstakel zal deze sprong ook als gefaald worden beschouwd en zal de agent dus een punishment krijgen.</p>
+<div class="highlight highlight-source-cs"><pre>        <span class="pl-k">public</span> <span class="pl-smi">void</span> <span class="pl-en">OnCollisionEnter</span><span class="pl-kos">(</span><span class="pl-smi">Collision</span> <span class="pl-s1">collision</span><span class="pl-kos">)</span>
+        <span class="pl-kos">{</span>
+            <span class="pl-s1">Debug</span><span class="pl-kos">.</span><span class="pl-en">Log</span><span class="pl-kos">(</span><span class="pl-s">"Collision detected with: "</span> <span class="pl-c1">+</span> <span class="pl-s1">collision</span><span class="pl-kos">.</span><span class="pl-s1">gameObject</span><span class="pl-kos">.</span><span class="pl-s1">name</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
 
-            <span class="c1">// If the obstacle is destroyed, reward the agent for completing the task</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">obstacle</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="n">SetReward</span><span class="p">(</span><span class="m">2.0f</span><span class="p">);</span>
-                <span class="n">EndEpisode</span><span class="p">();</span>
-            <span class="p">}</span>
+            <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-s1">collision</span><span class="pl-kos">.</span><span class="pl-s1">gameObject</span><span class="pl-kos">.</span><span class="pl-en">CompareTag</span><span class="pl-kos">(</span><span class="pl-s">"obstacle"</span><span class="pl-kos">)</span><span class="pl-kos">)</span>
+            <span class="pl-kos">{</span>
+                <span class="pl-s1">Debug</span><span class="pl-kos">.</span><span class="pl-en">Log</span><span class="pl-kos">(</span><span class="pl-s">"Collided with an obstacle! Ending episode."</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+                <span class="pl-s1">SetReward</span><span class="pl-kos">(</span><span class="pl-c1">-</span><span class="pl-c1">1.0f</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+                <span class="pl-s1">Destroy</span><span class="pl-kos">(</span><span class="pl-s1">obstacle</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+                <span class="pl-s1">EndEpisode</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+            <span class="pl-kos">}</span>
+        <span class="pl-kos">}</span></pre></div>
+<p>De Heuristic functie is voor gewone userinput om de agent te testen zonder ml, dit kan weg gelaten worden.</p>
+<div class="highlight highlight-source-cs"><pre>        <span class="pl-k">public</span> <span class="pl-k">override</span> <span class="pl-smi">void</span> <span class="pl-en">Heuristic</span><span class="pl-kos">(</span><span class="pl-k">in</span> <span class="pl-smi">ActionBuffers</span> <span class="pl-s1">actionsOut</span><span class="pl-kos">)</span>
+        <span class="pl-kos">{</span>
+            <span class="pl-k">var</span> <span class="pl-s1">continuousActionsOut</span> <span class="pl-c1">=</span> <span class="pl-s1">actionsOut</span><span class="pl-kos">.</span><span class="pl-s1">ContinuousActions</span><span class="pl-kos">;</span>
+            <span class="pl-s1">continuousActionsOut</span><span class="pl-kos">[</span><span class="pl-c1">0</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span><span class="pl-kos">;</span>
 
-            <span class="c1">// If the agent falls down, penalize it</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">transform</span><span class="p">.</span><span class="n">localPosition</span><span class="p">.</span><span class="n">y</span> <span class="p">&lt;=</span> <span class="p">-</span><span class="m">0.5f</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="n">SetReward</span><span class="p">(-</span><span class="m">1.0f</span><span class="p">);</span>
-                <span class="n">Destroy</span><span class="p">(</span><span class="n">obstacle</span><span class="p">);</span>
-                <span class="n">EndEpisode</span><span class="p">();</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-</pre></div>
-Wanneer de agent collides met het obstakel zal deze sprong ook als gefaald worden beschauwd en zal de agent dus een punishment krijgen.
-<div class="highlight"><pre>        <span class="k">public</span> <span class="k">void</span> <span class="nf">OnCollisionEnter</span><span class="p">(</span><span class="n">Collision</span> <span class="n">collision</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&quot;Collision detected with: &quot;</span> <span class="p">+</span> <span class="n">collision</span><span class="p">.</span><span class="n">gameObject</span><span class="p">.</span><span class="n">name</span><span class="p">);</span>
+            <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-s1">Input</span><span class="pl-kos">.</span><span class="pl-en">GetKey</span><span class="pl-kos">(</span><span class="pl-s1">KeyCode</span><span class="pl-kos">.</span><span class="pl-s1">Space</span><span class="pl-kos">)</span><span class="pl-kos">)</span>
+            <span class="pl-kos">{</span>
+                <span class="pl-s1">continuousActionsOut</span><span class="pl-kos">[</span><span class="pl-c1">0</span><span class="pl-kos">]</span> <span class="pl-c1">=</span> <span class="pl-c1">1f</span><span class="pl-kos">;</span>
+            <span class="pl-kos">}</span>
+        <span class="pl-kos">}</span></pre></div>
+<p>De IsGrounded functie wordt gebruikt om te kijken hoe ver de agent van de grond is.</p>
+<div class="highlight highlight-source-cs"><pre>        <span class="pl-k">private</span> <span class="pl-smi">bool</span> <span class="pl-en">IsGrounded</span><span class="pl-kos">(</span><span class="pl-kos">)</span>
+        <span class="pl-kos">{</span>
+            <span class="pl-c">// check if the agent is at the ground again, but only the ground/floor</span>
+            <span class="pl-k">return</span> <span class="pl-s1">Physics</span><span class="pl-kos">.</span><span class="pl-en">Raycast</span><span class="pl-kos">(</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">position</span><span class="pl-kos">,</span> <span class="pl-s1">Vector3</span><span class="pl-kos">.</span><span class="pl-s1">down</span><span class="pl-kos">,</span> <span class="pl-k">out</span> <span class="pl-smi">RaycastHit</span> <span class="pl-s1">hit</span><span class="pl-kos">,</span> <span class="pl-c1">1.1f</span><span class="pl-kos">)</span> <span class="pl-c1">&amp;&amp;</span> <span class="pl-s1">hit</span><span class="pl-kos">.</span><span class="pl-s1">collider</span><span class="pl-kos">.</span><span class="pl-en">CompareTag</span><span class="pl-kos">(</span><span class="pl-s">"floor"</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+        <span class="pl-kos">}</span></pre></div>
+<p>Tenslotte is er ook nog de RotateCorrectly functie. Deze zal de agent naar de juiste richting roteren om de objecten te zien aankomen. Dit wordt ook allemaal via raycasting bepaald.</p>
+<div class="highlight highlight-source-cs"><pre>        <span class="pl-k">private</span>  <span class="pl-smi">void</span> <span class="pl-en">RotateCorrectly</span><span class="pl-kos">(</span><span class="pl-kos">)</span>
+        <span class="pl-kos">{</span>
+            <span class="pl-c">// Check for obstacles using raycasts</span>
+            <span class="pl-smi">bool</span> <span class="pl-s1">seesObstacleFront</span> <span class="pl-c1">=</span> <span class="pl-s1">Physics</span><span class="pl-kos">.</span><span class="pl-en">Raycast</span><span class="pl-kos">(</span><span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">position</span><span class="pl-kos">,</span> <span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">forward</span><span class="pl-kos">,</span> <span class="pl-k">out</span> <span class="pl-smi">RaycastHit</span> <span class="pl-s1">hitFront</span><span class="pl-kos">,</span> <span class="pl-c1">10f</span><span class="pl-kos">)</span>
+                                  <span class="pl-c1">&amp;&amp;</span> <span class="pl-s1">hitFront</span><span class="pl-kos">.</span><span class="pl-s1">collider</span><span class="pl-kos">.</span><span class="pl-en">CompareTag</span><span class="pl-kos">(</span><span class="pl-s">"obstacle"</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
 
-            <span class="k">if</span> <span class="p">(</span><span class="n">collision</span><span class="p">.</span><span class="n">gameObject</span><span class="p">.</span><span class="n">CompareTag</span><span class="p">(</span><span class="s">&quot;obstacle&quot;</span><span class="p">))</span>
-            <span class="p">{</span>
-                <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&quot;Collided with an obstacle! Ending episode.&quot;</span><span class="p">);</span>
-                <span class="n">SetReward</span><span class="p">(-</span><span class="m">1.0f</span><span class="p">);</span>
-                <span class="n">Destroy</span><span class="p">(</span><span class="n">obstacle</span><span class="p">);</span>
-                <span class="n">EndEpisode</span><span class="p">();</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-</pre></div>
-De Heuristic fucntion is voor gewone userinput om de agent te testen zonder ml, dit kan weg gelaten worden.
-<div class="highlight"><pre>        <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">Heuristic</span><span class="p">(</span><span class="k">in</span> <span class="n">ActionBuffers</span> <span class="n">actionsOut</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="kt">var</span> <span class="n">continuousActionsOut</span> <span class="p">=</span> <span class="n">actionsOut</span><span class="p">.</span><span class="n">ContinuousActions</span><span class="p">;</span>
-            <span class="n">continuousActionsOut</span><span class="p">[</span><span class="m">0</span><span class="p">]</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+            <span class="pl-smi">bool</span> <span class="pl-s1">seesObstacleRight</span> <span class="pl-c1">=</span> <span class="pl-s1">Physics</span><span class="pl-kos">.</span><span class="pl-en">Raycast</span><span class="pl-kos">(</span><span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">position</span><span class="pl-kos">,</span> <span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">right</span><span class="pl-kos">,</span> <span class="pl-k">out</span> <span class="pl-smi">RaycastHit</span> <span class="pl-s1">hitRight</span><span class="pl-kos">,</span> <span class="pl-c1">10f</span><span class="pl-kos">)</span>
+                                  <span class="pl-c1">&amp;&amp;</span> <span class="pl-s1">hitRight</span><span class="pl-kos">.</span><span class="pl-s1">collider</span><span class="pl-kos">.</span><span class="pl-en">CompareTag</span><span class="pl-kos">(</span><span class="pl-s">"obstacle"</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
 
-            <span class="k">if</span> <span class="p">(</span><span class="n">Input</span><span class="p">.</span><span class="n">GetKey</span><span class="p">(</span><span class="n">KeyCode</span><span class="p">.</span><span class="n">Space</span><span class="p">))</span>
-            <span class="p">{</span>
-                <span class="n">continuousActionsOut</span><span class="p">[</span><span class="m">0</span><span class="p">]</span> <span class="p">=</span> <span class="m">1f</span><span class="p">;</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-</pre></div>
-De IsGrounded functie wordt gevruikt om te kijken hoe ver de agent van de grond is.
-<div class="highlight"><pre>        <span class="k">private</span> <span class="kt">bool</span> <span class="nf">IsGrounded</span><span class="p">()</span>
-        <span class="p">{</span>
-            <span class="c1">// check if the agent is at the ground again, but only the ground/floor</span>
-            <span class="k">return</span> <span class="n">Physics</span><span class="p">.</span><span class="n">Raycast</span><span class="p">(</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">,</span> <span class="n">Vector3</span><span class="p">.</span><span class="n">down</span><span class="p">,</span> <span class="k">out</span> <span class="n">RaycastHit</span> <span class="n">hit</span><span class="p">,</span> <span class="m">1.1f</span><span class="p">)</span> <span class="p">&amp;&amp;</span> <span class="n">hit</span><span class="p">.</span><span class="n">collider</span><span class="p">.</span><span class="n">CompareTag</span><span class="p">(</span><span class="s">&quot;floor&quot;</span><span class="p">);</span>
-        <span class="p">}</span>
-</pre></div>
-Tenslotte is er ook nog de RotateCorrectly functie. Deze zal de agent naar de juiste richting roteren om de objecten te zien aankomen. Dit wordt ook allemaal via raycasting bepaald.
-<div class="highlight"><pre>        <span class="k">private</span>  <span class="k">void</span> <span class="nf">RotateCorrectly</span><span class="p">()</span>
-        <span class="p">{</span>
-            <span class="c1">// Check for obstacles using raycasts</span>
-            <span class="kt">bool</span> <span class="n">seesObstacleFront</span> <span class="p">=</span> <span class="n">Physics</span><span class="p">.</span><span class="n">Raycast</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">forward</span><span class="p">,</span> <span class="k">out</span> <span class="n">RaycastHit</span> <span class="n">hitFront</span><span class="p">,</span> <span class="m">10f</span><span class="p">)</span>
-                                  <span class="p">&amp;&amp;</span> <span class="n">hitFront</span><span class="p">.</span><span class="n">collider</span><span class="p">.</span><span class="n">CompareTag</span><span class="p">(</span><span class="s">&quot;obstacle&quot;</span><span class="p">);</span>
-
-            <span class="kt">bool</span> <span class="n">seesObstacleRight</span> <span class="p">=</span> <span class="n">Physics</span><span class="p">.</span><span class="n">Raycast</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">right</span><span class="p">,</span> <span class="k">out</span> <span class="n">RaycastHit</span> <span class="n">hitRight</span><span class="p">,</span> <span class="m">10f</span><span class="p">)</span>
-                                  <span class="p">&amp;&amp;</span> <span class="n">hitRight</span><span class="p">.</span><span class="n">collider</span><span class="p">.</span><span class="n">CompareTag</span><span class="p">(</span><span class="s">&quot;obstacle&quot;</span><span class="p">);</span>
-
-            <span class="kt">bool</span> <span class="n">seesObstacleLeft</span> <span class="p">=</span> <span class="n">Physics</span><span class="p">.</span><span class="n">Raycast</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">,</span> <span class="p">-</span><span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">right</span><span class="p">,</span> <span class="k">out</span> <span class="n">RaycastHit</span> <span class="n">hitLeft</span><span class="p">,</span> <span class="m">10f</span><span class="p">)</span>
-                                  <span class="p">&amp;&amp;</span> <span class="n">hitLeft</span><span class="p">.</span><span class="n">collider</span><span class="p">.</span><span class="n">CompareTag</span><span class="p">(</span><span class="s">&quot;obstacle&quot;</span><span class="p">);</span>
+            <span class="pl-smi">bool</span> <span class="pl-s1">seesObstacleLeft</span> <span class="pl-c1">=</span> <span class="pl-s1">Physics</span><span class="pl-kos">.</span><span class="pl-en">Raycast</span><span class="pl-kos">(</span><span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">position</span><span class="pl-kos">,</span> <span class="pl-c1">-</span><span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">right</span><span class="pl-kos">,</span> <span class="pl-k">out</span> <span class="pl-smi">RaycastHit</span> <span class="pl-s1">hitLeft</span><span class="pl-kos">,</span> <span class="pl-c1">10f</span><span class="pl-kos">)</span>
+                                  <span class="pl-c1">&amp;&amp;</span> <span class="pl-s1">hitLeft</span><span class="pl-kos">.</span><span class="pl-s1">collider</span><span class="pl-kos">.</span><span class="pl-en">CompareTag</span><span class="pl-kos">(</span><span class="pl-s">"obstacle"</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
 
 
-            <span class="c1">// Rotate toward the correct direction to jump</span>
-            <span class="k">if</span> <span class="p">(!</span><span class="n">seesObstacleFront</span> <span class="p">&amp;&amp;</span> <span class="p">!</span><span class="n">seesObstacleLeft</span> <span class="p">&amp;&amp;</span> <span class="n">seesObstacleRight</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="c1">// rotate right if an object is right</span>
-                <span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span> <span class="p">=</span> <span class="n">Quaternion</span><span class="p">.</span><span class="n">LookRotation</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">right</span><span class="p">);</span>
-            <span class="p">}</span>
-            <span class="k">else</span> <span class="nf">if</span> <span class="p">(!</span><span class="n">seesObstacleFront</span> <span class="p">&amp;&amp;</span> <span class="n">seesObstacleLeft</span> <span class="p">&amp;&amp;</span> <span class="p">!</span><span class="n">seesObstacleRight</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="c1">// rotate left if an object is left</span>
-                <span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span> <span class="p">=</span> <span class="n">Quaternion</span><span class="p">.</span><span class="n">LookRotation</span><span class="p">(-</span><span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">right</span><span class="p">);</span>
-            <span class="p">}</span>
-            <span class="k">else</span> <span class="nf">if</span> <span class="p">((</span><span class="n">seesObstacleFront</span> <span class="p">&amp;&amp;</span> <span class="p">!</span><span class="n">seesObstacleRight</span> <span class="p">&amp;&amp;</span> <span class="p">!</span><span class="n">seesObstacleLeft</span><span class="p">)</span> <span class="p">||</span> <span class="p">(</span><span class="n">seesObstacleLeft</span> <span class="p">&amp;&amp;</span> <span class="n">seesObstacleRight</span> <span class="p">&amp;&amp;</span> <span class="p">!</span><span class="n">seesObstacleFront</span><span class="p">))</span>
-            <span class="p">{</span>
-                <span class="c1">// don&#39;t rotate when an object is at front or of there are object left and right</span>
-                <span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span> <span class="p">=</span> <span class="n">Quaternion</span><span class="p">.</span><span class="n">LookRotation</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">forward</span><span class="p">);</span>
-            <span class="p">}</span>
-            <span class="k">else</span>
-            <span class="p">{</span>
-                <span class="c1">// rotate 180 degrees if there is no object seen</span>
-                <span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span> <span class="p">=</span> <span class="n">Quaternion</span><span class="p">.</span><span class="n">LookRotation</span><span class="p">(-</span><span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">forward</span><span class="p">);</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div></p>
-<h3 id="settings-van-de-componenten">Settings van de componenten<a class="headerlink" href="#settings-van-de-componenten" title="Permanent link"></a></h3>
-<p>Vervolgens worden volgende settings gebruikt om de componenten in te stellen in de unity editor.</p>
-<h4 id="obstakel_1">Obstakel<a class="headerlink" href="#obstakel_1" title="Permanent link"></a></h4>
-<p>Deze settings zijn hetzelfde voor beide obstakels met als eenigste verschillen:
-- positie
-- scale
-- script
-Let er zeker ook op dat de tag &ldquo;obstacle&rdquo; is toegevoegd aan beide obstakels!
-<img alt="Settings obstakelx" src="/G:/Documents/ICT_AP/Local/VR/w1/jumper-assignment-BrentVanDaele/Pictures/Settings_obstacle.png" />
-<img alt="Settings die verschillen obstakelz" src="/G:/Documents/ICT_AP/Local/VR/w1/jumper-assignment-BrentVanDaele/Pictures/Settings_obstaclez.png" /></p>
-<h4 id="agent_1">Agent<a class="headerlink" href="#agent_1" title="Permanent link"></a></h4>
-<p>Voor de agent zijn settings is het vooral belangrijk dat de raycasting component is toegevoed en correct is ingesteld.
-<img alt="Settings agent" src="/G:/Documents/ICT_AP/Local/VR/w1/jumper-assignment-BrentVanDaele/Pictures/Settings_agent_1.png" />
-<img alt="Settings agent" src="/G:/Documents/ICT_AP/Local/VR/w1/jumper-assignment-BrentVanDaele/Pictures/Settings_agent_1.png" /></p></article></body></html>
+            <span class="pl-c">// Rotate toward the correct direction to jump</span>
+            <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-c1">!</span><span class="pl-s1">seesObstacleFront</span> <span class="pl-c1">&amp;&amp;</span> <span class="pl-c1">!</span><span class="pl-s1">seesObstacleLeft</span> <span class="pl-c1">&amp;&amp;</span> <span class="pl-s1">seesObstacleRight</span><span class="pl-kos">)</span>
+            <span class="pl-kos">{</span>
+                <span class="pl-c">// rotate right if an object is right</span>
+                <span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">rotation</span> <span class="pl-c1">=</span> <span class="pl-s1">Quaternion</span><span class="pl-kos">.</span><span class="pl-en">LookRotation</span><span class="pl-kos">(</span><span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">right</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+            <span class="pl-kos">}</span>
+            <span class="pl-k">else</span> <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-c1">!</span><span class="pl-s1">seesObstacleFront</span> <span class="pl-c1">&amp;&amp;</span> <span class="pl-s1">seesObstacleLeft</span> <span class="pl-c1">&amp;&amp;</span> <span class="pl-c1">!</span><span class="pl-s1">seesObstacleRight</span><span class="pl-kos">)</span>
+            <span class="pl-kos">{</span>
+                <span class="pl-c">// rotate left if an object is left</span>
+                <span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">rotation</span> <span class="pl-c1">=</span> <span class="pl-s1">Quaternion</span><span class="pl-kos">.</span><span class="pl-en">LookRotation</span><span class="pl-kos">(</span><span class="pl-c1">-</span><span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">right</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+            <span class="pl-kos">}</span>
+            <span class="pl-k">else</span> <span class="pl-k">if</span> <span class="pl-kos">(</span><span class="pl-kos">(</span><span class="pl-s1">seesObstacleFront</span> <span class="pl-c1">&amp;&amp;</span> <span class="pl-c1">!</span><span class="pl-s1">seesObstacleRight</span> <span class="pl-c1">&amp;&amp;</span> <span class="pl-c1">!</span><span class="pl-s1">seesObstacleLeft</span><span class="pl-kos">)</span> <span class="pl-c1">||</span> <span class="pl-kos">(</span><span class="pl-s1">seesObstacleLeft</span> <span class="pl-c1">&amp;&amp;</span> <span class="pl-s1">seesObstacleRight</span> <span class="pl-c1">&amp;&amp;</span> <span class="pl-c1">!</span><span class="pl-s1">seesObstacleFront</span><span class="pl-kos">)</span><span class="pl-kos">)</span>
+            <span class="pl-kos">{</span>
+                <span class="pl-c">// don't rotate when an object is at front or of there are object left and right</span>
+                <span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">rotation</span> <span class="pl-c1">=</span> <span class="pl-s1">Quaternion</span><span class="pl-kos">.</span><span class="pl-en">LookRotation</span><span class="pl-kos">(</span><span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">forward</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+            <span class="pl-kos">}</span>
+            <span class="pl-k">else</span>
+            <span class="pl-kos">{</span>
+                <span class="pl-c">// rotate 180 degrees if there is no object seen</span>
+                <span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">rotation</span> <span class="pl-c1">=</span> <span class="pl-s1">Quaternion</span><span class="pl-kos">.</span><span class="pl-en">LookRotation</span><span class="pl-kos">(</span><span class="pl-c1">-</span><span class="pl-k">this</span><span class="pl-kos">.</span><span class="pl-s1">transform</span><span class="pl-kos">.</span><span class="pl-s1">forward</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+            <span class="pl-kos">}</span>
+        <span class="pl-kos">}</span>
+    <span class="pl-kos">}</span>
+<span class="pl-kos">}</span></pre></div>
+<div class="markdown-heading"><h3 class="heading-element">Settings van de componenten</h3><a id="user-content-settings-van-de-componenten" class="anchor" aria-label="Permalink: Settings van de componenten" href="#settings-van-de-componenten"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Vervolgens worden volgende settings gebruikt om de componenten in te stellen in de Unity editor.</p>
+<div class="markdown-heading"><h4 class="heading-element">Obstakel</h4><a id="user-content-obstakel-1" class="anchor" aria-label="Permalink: Obstakel" href="#obstakel-1"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Deze settings zijn hetzelfde voor beide obstakels met als enigste verschillen:</p>
+<ul>
+<li>positie</li>
+<li>scale</li>
+<li>script</li>
+</ul>
+<blockquote>
+<p>Let er zeker ook op dat de tag "obstacle" is toegevoegd aan beide obstakels!</p>
+</blockquote>
+<p><a target="_blank" rel="noopener noreferrer" href="/C:/Users/brent/Documents/AP/Local/2ITIOT1/VR%20Experience/jumper-assignment-BrentVanDaele/Pictures/Settings_obstacle.PNG"><img src="/C:/Users/brent/Documents/AP/Local/2ITIOT1/VR%20Experience/jumper-assignment-BrentVanDaele/Pictures/Settings_obstacle.PNG" alt="Settings obstakelx" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="/C:/Users/brent/Documents/AP/Local/2ITIOT1/VR%20Experience/jumper-assignment-BrentVanDaele/Pictures/Settings_obstaclez.PNG"><img src="/C:/Users/brent/Documents/AP/Local/2ITIOT1/VR%20Experience/jumper-assignment-BrentVanDaele/Pictures/Settings_obstaclez.PNG" alt="Settings die verschillen obstakelz" style="max-width: 100%;"></a></p>
+<div class="markdown-heading"><h4 class="heading-element">Agent</h4><a id="user-content-agent-1" class="anchor" aria-label="Permalink: Agent" href="#agent-1"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Voor de agent zijn settings is het vooral belangrijk dat de raycasting component is toegevoegd en correct is ingesteld. Maak van de obstakels zeker prefabs zodat deze meegegeven kunnen worden in de script settings!
+<a target="_blank" rel="noopener noreferrer" href="/C:/Users/brent/Documents/AP/Local/2ITIOT1/VR%20Experience/jumper-assignment-BrentVanDaele/Pictures/Settings_agent_1.PNG"><img src="/C:/Users/brent/Documents/AP/Local/2ITIOT1/VR%20Experience/jumper-assignment-BrentVanDaele/Pictures/Settings_agent_1.PNG" alt="Settings agent deel 1" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="/C:/Users/brent/Documents/AP/Local/2ITIOT1/VR%20Experience/jumper-assignment-BrentVanDaele/Pictures/Settings_agent_2.PNG"><img src="/C:/Users/brent/Documents/AP/Local/2ITIOT1/VR%20Experience/jumper-assignment-BrentVanDaele/Pictures/Settings_agent_2.PNG" alt="Settings agent deel 2" style="max-width: 100%;"></a></p>
+<div class="markdown-heading"><h3 class="heading-element">Finaliseren omgeving</h3><a id="user-content-finaliseren-omgeving" class="anchor" aria-label="Permalink: Finaliseren omgeving" href="#finaliseren-omgeving"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Tenslotte kan de omgeving gefinaliseerd worden door de obstakels, die nu prefab’s zijn, van het veld te verwijderen.
+<a target="_blank" rel="noopener noreferrer" href="/C:/Users/brent/Documents/AP/Local/2ITIOT1/VR%20Experience/jumper-assignment-BrentVanDaele/Pictures/Enviroment_final.PNG"><img src="/C:/Users/brent/Documents/AP/Local/2ITIOT1/VR%20Experience/jumper-assignment-BrentVanDaele/Pictures/Enviroment_final.PNG" alt="Finale opstelling" style="max-width: 100%;"></a></p>
+<div class="markdown-heading"><h2 class="heading-element">Runnen ml-agent training</h2><a id="user-content-runnen-ml-agent-training" class="anchor" aria-label="Permalink: Runnen ml-agent training" href="#runnen-ml-agent-training"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Vervolgens kan nu de training gerund worden met volgende settings, die aan de hand van experimenteren het beste resultaat opleverden. Voor de finetuning werd deels gebruik gemaakt van chatgpt (chatgpt, 2025) en de leerstof van AP (Peeters, 2025).</p>
+<div class="highlight highlight-source-yaml"><pre><span class="pl-ent">behaviors</span>:
+  <span class="pl-ent">CubeAgent</span>:
+    <span class="pl-ent">trainer_type</span>: <span class="pl-s">ppo</span>
+    <span class="pl-ent">hyperparameters</span>:
+      <span class="pl-ent">batch_size</span>: <span class="pl-c1">256</span>
+      <span class="pl-ent">buffer_size</span>: <span class="pl-c1">2048</span>
+      <span class="pl-ent">learning_rate</span>: <span class="pl-c1">2.0e-4</span>
+      <span class="pl-ent">beta</span>: <span class="pl-c1">5.0e-3</span>
+      <span class="pl-ent">epsilon</span>: <span class="pl-c1">0.2</span>
+      <span class="pl-ent">lambd</span>: <span class="pl-c1">0.99</span>
+      <span class="pl-ent">num_epoch</span>: <span class="pl-c1">4</span>
+      <span class="pl-ent">learning_rate_schedule</span>: <span class="pl-s">linear</span>
+      <span class="pl-ent">beta_schedule</span>: <span class="pl-s">constant</span>
+      <span class="pl-ent">epsilon_schedule</span>: <span class="pl-s">linear</span>
+    <span class="pl-ent">network_settings</span>:
+      <span class="pl-ent">normalize</span>: <span class="pl-c1">false</span>
+      <span class="pl-ent">hidden_units</span>: <span class="pl-c1">128</span>
+      <span class="pl-ent">num_layers</span>: <span class="pl-c1">2</span>
+    <span class="pl-ent">reward_signals</span>:
+      <span class="pl-ent">extrinsic</span>:
+        <span class="pl-ent">gamma</span>: <span class="pl-c1">0.99</span>
+        <span class="pl-ent">strength</span>: <span class="pl-c1">1.0</span>
+    <span class="pl-ent">max_steps</span>: <span class="pl-c1">150000</span>
+    <span class="pl-ent">time_horizon</span>: <span class="pl-c1">64</span>
+    <span class="pl-ent">summary_freq</span>: <span class="pl-c1">2000</span></pre></div>
+<div class="markdown-heading"><h2 class="heading-element">Resultaten</h2><a id="user-content-resultaten" class="anchor" aria-label="Permalink: Resultaten" href="#resultaten"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>In volgende grafieken van de 3 resultaten runs kan gezien worden dat de agent "slow but steady" aan het bijleren is over hoe hij over de obstakels moet springen. Er is een lichte variatie wat wijst op dat er nog betere fijnregeling bestaan voor het reward systeem en de training settings. Echter heeft de agent al een zeer goed resultaat bereikt!</p>
+<p><a target="_blank" rel="noopener noreferrer" href="/C:/Users/brent/Documents/AP/Local/2ITIOT1/VR%20Experience/jumper-assignment-BrentVanDaele/Pictures/final_runs.jpg"><img src="/C:/Users/brent/Documents/AP/Local/2ITIOT1/VR%20Experience/jumper-assignment-BrentVanDaele/Pictures/final_runs.jpg" alt="Resultaat" style="max-width: 100%;"></a></p>
+<div class="markdown-heading"><h2 class="heading-element">Bronnen</h2><a id="user-content-bronnen" class="anchor" aria-label="Permalink: Bronnen" href="#bronnen"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<ul>
+<li>Van Daele, B. (2024) Labo 02 - ML Agents. GitHub-repository, beschikbaar op: <a href="https://github.com/AP-IT-GH/labo-02-mlagents01-BrentVanDaele">https://github.com/AP-IT-GH/labo-02-mlagents01-BrentVanDaele</a> (Geraadpleegd op 16 april 2025).</li>
+<li>Peters Tom, AP (2025), VR Experience, Digitap, Geraadpleegd op 30 maart 2025</li>
+<li>Chatgpt, OpenAI (2025), Geraadpleegd op 16 april 2025</li>
+</ul>
+</article></body></html>
