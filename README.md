@@ -10,7 +10,7 @@ Om tot het gewenst resultaat te bekomen zullen volgende stappen doorlopen worden
 ### Omgeving
 Om te starten wordt er een omgeving aan gemaakt in Unity waar er een plane als floor wordt toegevoegd gevolgd door 3 kubussen, namelijk de agent en twee obstakel. Hierna wordt er een kleur toegewezen om de objecten uit elkaar te houden en worden de obstakels naar de juiste grootte gebracht.
 
-![Opstelling](Pictures/Enviroment.png)
+![Opstelling](Pictures/Enviroment.PNG)
 
 ### Scripts
 Volgende scripts worden gebruikt om de ml-agent tot leven te wekken. Extra info kwam van eerdere labo’s en gegeven documentatie (Van Daele, 2025) (Peeters, 2025).
@@ -221,17 +221,17 @@ Deze settings zijn hetzelfde voor beide obstakels met als enigste verschillen:
 
 >Let er zeker ook op dat de tag "obstacle" is toegevoegd aan beide obstakels!
 
-![Settings obstakelx](Pictures/Settings_obstacle.png)
-![Settings die verschillen obstakelz](Pictures/Settings_obstaclez.png)
+![Settings obstakelx](Pictures/Settings_obstacle.PNG)
+![Settings die verschillen obstakelz](Pictures/Settings_obstaclez.PNG)
 
 #### Agent
 Voor de agent zijn settings is het vooral belangrijk dat de raycasting component is toegevoegd en correct is ingesteld. Maak van de obstakels zeker prefabs zodat deze meegegeven kunnen worden in de script settings!
-![Settings agent deel 1](Pictures/Settings_agent_1.png)
-![Settings agent deel 2](Pictures/Settings_agent_2.png)
+![Settings agent deel 1](Pictures/Settings_agent_1.PNG)
+![Settings agent deel 2](Pictures/Settings_agent_2.PNG)
 
 ### Finaliseren omgeving
 Tenslotte kan de omgeving gefinaliseerd worden door de obstakels, die nu prefab’s zijn, van het veld te verwijderen.
-![Finale opstelling](Pictures/Enviroment_final.png)
+![Finale opstelling](Pictures/Enviroment_final.PNG)
 
 ## Runnen ml-agent training
 Vervolgens kan nu de training gerund worden met volgende settings, die aan de hand van experimenteren het beste resultaat opleverden. Voor de finetuning werd deels gebruik gemaakt van chatgpt (chatgpt, 2025) en de leerstof van AP (Peeters, 2025).
